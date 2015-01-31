@@ -102,6 +102,7 @@ q.answer_set.create(text="Something!", user="Aaron", date=timezone.now())
 
 The tutorial [continues](https://docs.djangoproject.com/en/1.7/intro/tutorial02/) with the Django admin interface...
 
+
 ```bash
 python manage.py createsuperuser
 ```
@@ -109,3 +110,10 @@ python manage.py createsuperuser
 This seems to only affect the database.
 
 Models show up in the admin after being registered in [admin.py](shufflesort/admin.py).
+
+Wow you can do quite a lot with the admin interface... Could even use it as a general db editing platform for whatever data entry/maintenance you want to do. Hmm! I wonder how it handles contentious editing; is this a concern?
+
+
+The tutorial [continues](https://docs.djangoproject.com/en/1.7/intro/tutorial03/) with views...
+
+
