@@ -33,3 +33,5 @@ psql
 \c askreduce
 \d
 ```
+
+Now there's also a `__pycache__` directory that shows up, so I'll start a [.gitignore](.gitignore).
