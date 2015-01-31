@@ -72,3 +72,19 @@ But now it's time to actually migrate and be ready to do stuff:
 ```bash
 python manage.py migrate
 ```
+
+This is how you get a local console to play with the database and so on:
+
+```bash
+python manage.py shell
+```
+
+It's a normal shell, much like the equivalent in Rails...
+
+```python
+from shufflesort.models import Question, Answer
+from django.utils import timezone
+q = Question(user="Aaron", text="What is the deal?", date=timezone.now())
+q.save()
+# etc.
+```
