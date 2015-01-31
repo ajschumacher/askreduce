@@ -19,3 +19,17 @@ psql -c "create database askreduce;"
 Edited [settings.py](askreduce/settings.py) to have the right settings for `DATABASES`.
 
 Edited [settings.py](askreduce/settings.py) to have the right setting for `TIME_ZONE`. (Select from [this list](http://en.wikipedia.org/wiki/List_of_tz_database_time_zones); I used "America/New_York".)
+
+Initial database migration for the default Django applications (like `django.contrib.sessions`):
+
+```bash
+python manage.py migrate
+```
+
+Now there's a bunch of stuff in the `askreduce` database. Can check out the list of tables like this:
+
+```bash
+psql
+\c askreduce
+\d
+```
