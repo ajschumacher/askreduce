@@ -17,3 +17,5 @@ psql -c "create database askreduce;"
 ```
 
 Edited [settings.py](askreduce/settings.py) to have the right settings for `DATABASES`.
+
+Edited [settings.py](askreduce/settings.py) to have the right setting for `TIME_ZONE`. (Select from [this list](http://en.wikipedia.org/wiki/List_of_tz_database_time_zones); I used "America/New_York".)
