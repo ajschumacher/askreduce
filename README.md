@@ -79,7 +79,7 @@ This is how you get a local console to play with the database and so on:
 python manage.py shell
 ```
 
-It's a normal shell, much like the equivalent in Rails...
+It's a normal shell, much like the equivalent in Rails (`rails console`)...
 
 ```python
 from shufflesort.models import Question, Answer
