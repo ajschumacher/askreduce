@@ -47,3 +47,7 @@ And now, to make an app where the magic will happen... with a clever (?) name:
 ```bash
 python manage.py startapp shufflesort
 ```
+
+Add some model specifications in [models.py](shufflesort/models.py).
+
+Add `shufflesort` to the `INSTALLED_APPS` in [settings.py](askreduce/settings.py).
