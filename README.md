@@ -51,3 +51,6 @@ python manage.py startapp shufflesort
 Add some model specifications in [models.py](shufflesort/models.py).
 
 Add `shufflesort` to the `INSTALLED_APPS` in [settings.py](askreduce/settings.py).
+
+Yikes; `__pycache__` directories are showing up all over. Time to expand their exclusion in [.gitignore](.gitignore).
+
