@@ -35,3 +35,9 @@ psql
 ```
 
 Now there's also a `__pycache__` directory that shows up, so I'll start a [.gitignore](.gitignore).
+
+Sure enough, there's HTTP happening now when you do this:
+
+```bash
+python manage.py runserver
+```
