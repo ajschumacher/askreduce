@@ -98,3 +98,14 @@ Question.objects.get(date__year=2015)
 q.answer_set.create(text="Something!", user="Aaron", date=timezone.now())
 # and things have a `.delete`
 ```
+
+
+The tutorial [continues](https://docs.djangoproject.com/en/1.7/intro/tutorial02/) with the Django admin interface...
+
+```bash
+python manage.py createsuperuser
+```
+
+This seems to only affect the database.
+
+Models show up in the admin after being registered in [admin.py](shufflesort/admin.py).

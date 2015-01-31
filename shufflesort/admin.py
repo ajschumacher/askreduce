@@ -1,3 +1,6 @@
 from django.contrib import admin
+from shufflesort.models import Question, Answer
 
-# Register your models here.
+
+admin.site.register(Question)
+admin.site.register(Answer)
