@@ -59,3 +59,16 @@ Okay; time to make a migration:
 ```bash
 python manage.py makemigrations shufflesort
 ```
+
+The tutorial includes these diagnostic/interesting commands for reference:
+
+```bash
+python manage.py sqlmigrate shufflesort 0001
+python manage.py check
+```
+
+But now it's time to actually migrate and be ready to do stuff:
+
+```bash
+python manage.py migrate
+```
