@@ -54,3 +54,8 @@ Add `shufflesort` to the `INSTALLED_APPS` in [settings.py](askreduce/settings.py
 
 Yikes; `__pycache__` directories are showing up all over. Time to expand their exclusion in [.gitignore](.gitignore).
 
+Okay; time to make a migration:
+
+```bash
+python manage.py makemigrations shufflesort
+```
