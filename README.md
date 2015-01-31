@@ -41,3 +41,9 @@ Sure enough, there's HTTP happening now when you do this:
 ```bash
 python manage.py runserver
 ```
+
+And now, to make an app where the magic will happen... with a clever (?) name:
+
+```bash
+python manage.py startapp shufflesort
+```
