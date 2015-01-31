@@ -90,3 +90,11 @@ q.save()
 ```
 
 As recommended by the tutorial, add `__str__` methods to [models.py](shufflesort/models.py).
+
+Wow, there's a good deal of underscore magic.
+
+```python
+Question.objects.get(date__year=2015)
+q.answer_set.create(text="Something!", user="Aaron", date=timezone.now())
+# and things have a `.delete`
+```
