@@ -88,3 +88,5 @@ q = Question(user="Aaron", text="What is the deal?", date=timezone.now())
 q.save()
 # etc.
 ```
+
+As recommended by the tutorial, add `__str__` methods to [models.py](shufflesort/models.py).

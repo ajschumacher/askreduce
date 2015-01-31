@@ -11,9 +11,15 @@ class Question(models.Model):
     text = models.TextField()
     date = models.DateTimeField()
 
+    def __str__(self):
+        return self.user + ' - ' + self.text[:32]
+
 
 class Answer(models.Model):
     question = models.ForeignKey(Question)
     user = models.CharField(max_length=32)
     text = models.TextField()
     date = models.DateTimeField()
+
+    def __str__(self):
+        return self.user + ' - ' + self.text[:32]
