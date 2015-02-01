@@ -5,6 +5,10 @@
     <title>identity is tricky</title>
   </head>
   <body>
-    There will be a form here.
+    {% if 'user' in request.session %}
+    sign out form
+    {% else %}
+    sign in form
+    {% endif %}
   </body>
 </html>
