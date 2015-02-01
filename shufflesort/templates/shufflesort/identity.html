@@ -6,9 +6,20 @@
   </head>
   <body>
     {% if 'user' in request.session %}
-    sign out form
+    <p>
+      You are {{ request.session.user }}.
+    </p>
+    <form action="{% url 'shufflesort:identity' %}" method="post">
+      {% csrf_token %}
+      <input type="hidden" name="deidentify" />
+      <input type="submit" value="deidentify" />
+    </form>
     {% else %}
-    sign in form
+    <form action="{% url 'shufflesort:identity' %}" method="post">
+      {% csrf_token %}
+      <input type="text" name="user" />
+      <input type="submit" value="identify" />
+    </form>
     {% endif %}
   </body>
 </html>
