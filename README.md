@@ -125,3 +125,6 @@ Templating works as expected. A little surprising it's conventional to bury thin
 
 
 The tutorial [continues](https://docs.djangoproject.com/en/1.7/intro/tutorial04/) with forms...
+
+
+Okay the other stuff is okay, but I want to set up GET/POST and sessions stuff, which isn't covered, so it's off to the wild wild west for me.
