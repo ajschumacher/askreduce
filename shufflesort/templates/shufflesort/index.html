@@ -1,7 +1,11 @@
 {% if question_list %}
     <ul>
     {% for question in question_list %}
-        <li><a href="/question/{{ question.id }}/">{{ question.text }}</a></li>
+      <li>
+        <a href="{% url 'shufflesort:question' question.id %}">
+          {{ question.text }}
+        </a>
+      </li>
     {% endfor %}
     </ul>
 {% else %}
