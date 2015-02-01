@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render
+from django.views.generic import View
 
 from shufflesort.models import Question
 
@@ -15,5 +16,6 @@ def question(request, question_id):
     return render(request, 'shufflesort/question.html', context)
 
 
-def identify(request):
-    return render(request, 'shufflesort/identify.html')
+class IdentityView(View):
+    def get(self, request):
+        return render(request, 'shufflesort/identify.html')
