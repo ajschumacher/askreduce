@@ -21,5 +21,6 @@ def question(request, question_id):
 class IdentityView(View):
     def get(self, request):
         return render(request, 'shufflesort/identity.html')
+
     def post(self, request):
         return HttpResponseRedirect(reverse('shufflesort:identity'))
