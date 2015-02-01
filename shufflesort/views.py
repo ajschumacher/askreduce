@@ -1,3 +1,5 @@
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import View
 
@@ -19,3 +21,5 @@ def question(request, question_id):
 class IdentityView(View):
     def get(self, request):
         return render(request, 'shufflesort/identify.html')
+    def post(self, request):
+        return HttpResponseRedirect(reverse('shufflesort:identity'))
