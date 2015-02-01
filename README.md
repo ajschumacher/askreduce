@@ -120,3 +120,5 @@ The tutorial [continues](https://docs.djangoproject.com/en/1.7/intro/tutorial03/
 Looks like as a placeholder adding a `HttpResponse` `index` function in [views.py](shufflesort/views.py). Then adding a [urls.py](shufflesort/urls.py) in [shufflesort/](shufflesort/) though we already have [urls.py](askreduce/urls.py) in [askreduce/](askreduce/). Ah, we edit [that one](askreduce/urls.py) as well. Now there's a response at `/shufflesort/`. Yup, can do all the good things with routes.
 
 Sure enough it's easy to grab stuff from the database.
+
+Templating works as expected. A little surprising it's conventional to bury things so deep as [askreduce/shufflesort/templates/shufflesort/](askreduce/shufflesort/templates/shufflesort/).

@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.template import RequestContext, loader
 
 # not using
 # from django.shortcuts import render
@@ -8,8 +9,11 @@ from shufflesort.models import Question
 
 def index(request):
     question_list = Question.objects.order_by('date')
-    output = '\n'.join(['<p>'+q.text+'</p>' for q in question_list])
-    return HttpResponse(output)
+    template = loader.get_template('shufflesort/index.html')
+    context = RequestContext(request, {
+        'question_list': question_list,
+    })
+    return HttpResponse(template.render(context))
 
 
 def question(request, question_id):
