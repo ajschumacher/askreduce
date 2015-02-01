@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import Http404
 from django.shortcuts import render
 
 from shufflesort.models import Question
@@ -11,4 +11,9 @@ def index(request):
 
 
 def question(request, question_id):
-    return HttpResponse("This is question %s." % question_id)
+    try:
+        question = Question.objects.get(pk=question_id)
+    except Question.DoesNotExist:
+        raise Http404("Question does not exist")
+    context = {'question': question}
+    return render(request, 'shufflesort/question.html', context)
