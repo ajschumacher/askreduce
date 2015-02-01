@@ -122,3 +122,6 @@ Looks like as a placeholder adding a `HttpResponse` `index` function in [views.p
 Sure enough it's easy to grab stuff from the database.
 
 Templating works as expected. A little surprising it's conventional to bury things so deep as [askreduce/shufflesort/templates/shufflesort/](askreduce/shufflesort/templates/shufflesort/). And the `django.shortcuts.render` is nice.
+
+
+The tutorial [continues](https://docs.djangoproject.com/en/1.7/intro/tutorial04/) with forms...
