@@ -13,3 +13,7 @@ def question(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     context = {'question': question}
     return render(request, 'shufflesort/question.html', context)
+
+
+def identify(request):
+    return render(request, 'shufflesort/identify.html')
