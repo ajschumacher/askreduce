@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{% block title %}askreduce{% endblock %}</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'shufflesort/style.css' %}" />
   </head>
   <body>
 
