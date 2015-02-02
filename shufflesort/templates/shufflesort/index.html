@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if question_list %}
-<ul>
+<ol>
   {% for question in question_list %}
   <li>
     <a href="{% url 'shufflesort:question' question.id %}">
@@ -11,7 +11,7 @@
     </a>
   </li>
   {% endfor %}
-</ul>
+</ol>
 {% else %}
 <p>No questions!</p>
 {% endif %}
