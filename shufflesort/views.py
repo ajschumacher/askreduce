@@ -1,10 +1,11 @@
+from django.utils import timezone
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404, render
 import functools
 from django.views.generic import View
 
-from shufflesort.models import Question
+from shufflesort.models import Question, Answer
 
 
 def with_identity(func):
@@ -32,6 +33,18 @@ class QuestionView(View):
         question = get_object_or_404(Question, pk=question_id)
         context = {'question': question}
         return render(request, 'shufflesort/question.html', context)
+
+    @with_identity
+    def post(self, request, question_id):
+        question = get_object_or_404(Question, pk=question_id)
+        if 'text' in request.POST:
+            answer = Answer(question=question,
+                            text=request.POST['text'],
+                            user=request.session['user'],
+                            date=timezone.now())
+            answer.save()
+        return HttpResponseRedirect(reverse('shufflesort:question',
+                                            args=(question_id,)))
 
 
 class IdentityView(View):

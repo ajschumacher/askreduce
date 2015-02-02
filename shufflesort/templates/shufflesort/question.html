@@ -4,4 +4,10 @@
 
 <p>{{ question.text }}</p>
 
+<form action="{% url 'shufflesort:question' question.id %}" method="post">
+  {% csrf_token %}
+  <textarea name="text"></textarea>
+  <input type="submit" value="submit" />
+</form>
+
 {% endblock %}
