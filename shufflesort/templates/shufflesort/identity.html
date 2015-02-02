@@ -1,28 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>identity is tricky</title>
-  </head>
-  <body>
-    {% if 'target' in request.session %}
-    <h1>{{request.session.target}}</h1>
-    {% endif %}
-    {% if 'user' in request.session %}
-    <p>
-      You are {{ request.session.user }}.
-    </p>
-    <form action="{% url 'shufflesort:identity' %}" method="post">
-      {% csrf_token %}
-      <input type="hidden" name="deidentify" />
-      <input type="submit" value="deidentify" />
-    </form>
-    {% else %}
-    <form action="{% url 'shufflesort:identity' %}" method="post">
-      {% csrf_token %}
-      <input type="text" name="user" />
-      <input type="submit" value="identify" />
-    </form>
-    {% endif %}
-  </body>
-</html>
+{% extends "shufflesort/base.html" %}
+
+{% block content %}
+
+{% if 'target' in request.session %}
+<h1>{{request.session.target}}</h1>
+{% endif %}
+{% if 'user' in request.session %}
+<p>
+  You are {{ request.session.user }}.
+</p>
+<form action="{% url 'shufflesort:identity' %}" method="post">
+  {% csrf_token %}
+  <input type="hidden" name="deidentify" />
+  <input type="submit" value="deidentify" />
+</form>
+{% else %}
+<form action="{% url 'shufflesort:identity' %}" method="post">
+  {% csrf_token %}
+  <input type="text" name="user" />
+  <input type="submit" value="identify" />
+</form>
+{% endif %}
+
+{% endblock %}

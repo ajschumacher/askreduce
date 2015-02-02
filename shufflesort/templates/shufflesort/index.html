@@ -1,13 +1,19 @@
+{% extends "shufflesort/base.html" %}
+
+{% block content %}
+
 {% if question_list %}
-    <ul>
-    {% for question in question_list %}
-      <li>
-        <a href="{% url 'shufflesort:question' question.id %}">
-          {{ question.text }}
-        </a>
-      </li>
-    {% endfor %}
-    </ul>
+<ul>
+  {% for question in question_list %}
+  <li>
+    <a href="{% url 'shufflesort:question' question.id %}">
+      {{ question.text }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
 {% else %}
-    <p>No questions!</p>
+<p>No questions!</p>
 {% endif %}
+
+{% endblock %}

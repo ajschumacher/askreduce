@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Question {{ question.id }}</title>
-  </head>
-  <body>
-    <p>{{ question.text }}</p>
-  </body>
-</html>
+{% extends "shufflesort/base.html" %}
+
+{% block content %}
+
+<p>{{ question.text }}</p>
+
+{% endblock %}
