@@ -10,10 +10,10 @@ from shufflesort.models import Question
 def with_identity(func):
     @functools.wraps(func)
     def newfunc(request, **kwargs):
+        request.session['target'] = request.path
         if 'user' in request.session:
             return func(request, **kwargs)
         else:
-            request.session['target'] = request.path
             return HttpResponseRedirect(reverse('shufflesort:identity'))
     return newfunc
 
@@ -41,8 +41,8 @@ class IdentityView(View):
         if 'user' in request.POST:
             print(request.POST['user'])
             request.session['user'] = request.POST['user']
-        if 'deidentify' in request.POST:
-            request.session.flush()
+        if 'deidentify' in request.POST and 'user' in request.session:
+            del request.session['user']
         if 'target' in request.session:
             target = request.session['target']
             del request.session['target']
