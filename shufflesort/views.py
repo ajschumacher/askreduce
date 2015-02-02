@@ -31,7 +31,11 @@ class QuestionView(View):
     @with_identity
     def get(self, request, question_id):
         question = get_object_or_404(Question, pk=question_id)
-        context = {'question': question}
+        answers = question.answer_set.all()
+        answerers = [answer.user for answer in answers]
+        answered = request.session['user'] in answerers
+        context = {'question': question,
+                   'answered': answered,}
         return render(request, 'shufflesort/question.html', context)
 
     @with_identity
