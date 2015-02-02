@@ -2,9 +2,6 @@
 
 {% block content %}
 
-{% if 'target' in request.session %}
-<h1>{{request.session.target}}</h1>
-{% endif %}
 {% if 'user' in request.session %}
 <p>
   You are {{ request.session.user }}.
