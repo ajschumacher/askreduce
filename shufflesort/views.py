@@ -34,12 +34,10 @@ def question(request, question_id):
 
 class IdentityView(View):
     def get(self, request):
-        print(request.session.get('user', 'nada'))
         return render(request, 'shufflesort/identity.html')
 
     def post(self, request):
         if 'user' in request.POST:
-            print(request.POST['user'])
             request.session['user'] = request.POST['user']
         if 'deidentify' in request.POST and 'user' in request.session:
             del request.session['user']
