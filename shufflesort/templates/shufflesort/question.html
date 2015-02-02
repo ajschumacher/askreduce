@@ -10,4 +10,10 @@
   <input type="submit" value="submit" />
 </form>
 
+<ul>
+  {% for answer in question.answer_set.all  %}
+  <li>{{ answer.user }}<pre>{{ answer.text }}</pre></li>
+  {% endfor %}
+</ul>
+
 {% endblock %}
