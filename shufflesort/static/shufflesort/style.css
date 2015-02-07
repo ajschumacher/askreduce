@@ -1,4 +1,62 @@
+body {
+  background-color: #DCDCCC;
+  color: #3F3F3F;
+  font-size: 1.25em;
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype",
+  "Palatino LT STD", Georgia, serif;
+  line-height: 160%;
+  max-width: 40em;
+  margin: auto;
+  padding: 0 1em;
+}
+
 header {
   position: absolute;
   right: 0px;
+}
+
+img {
+  max-width: 100%;
+}
+
+pre {
+  line-height: normal;
+}
+
+a {
+  color: #9C6363;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #8C5353;
+}
+
+a:hover {
+  color: #AC7373;
+}
+
+a:active {
+  color: #FFFFFF;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  body {
+    font-size: 2.25em;
+  }
+}
+
+@media print {
+  img {
+    max-height: 3in;
+  }
+  body {
+    font-size: 0.8em;
+  }
 }
