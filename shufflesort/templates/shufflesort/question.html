@@ -12,7 +12,7 @@
 
 {% if answered %}
 <ul>
-  {% for answer in question.answer_set.all  %}
+  {% for answer in answers  %}
   <li>{{ answer.user }}
     <div class="answer">
       {{ answer.text }}

@@ -35,6 +35,7 @@ class QuestionView(View):
         answerers = [answer.user for answer in answers]
         answered = request.session['user'] in answerers
         context = {'question': question,
+                   'answers': answers,
                    'answered': answered,}
         return render(request, 'shufflesort/question.html', context)
 
