@@ -52,6 +52,13 @@ class QuestionView(View):
                                             args=(question_id,)))
 
 
+class UserView(View):
+    @with_identity
+    def get(self, request, user_name):
+        context = {'user_name': user_name,}
+        return render(request, 'shufflesort/user.html', context)
+
+
 class IdentityView(View):
     def get(self, request):
         return render(request, 'shufflesort/identity.html')
