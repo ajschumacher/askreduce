@@ -31,7 +31,7 @@ class QuestionView(View):
     @with_identity
     def get(self, request, question_id):
         question = get_object_or_404(Question, pk=question_id)
-        answers = question.answer_set.all()
+        answers = question.answer_set.order_by('-date').all()
         answerers = [answer.user for answer in answers]
         answered = request.session['user'] in answerers
         context = {'question': question,
