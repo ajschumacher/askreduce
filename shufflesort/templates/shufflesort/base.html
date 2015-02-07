@@ -10,8 +10,10 @@
   <body>
 
     <header>
+      <a class="home" href="/">askreduce/</a>
       {% if 'user' in request.session %}
-      <form action="{% url 'shufflesort:identity' %}" method="post">
+      <form class="deidentify"
+            action="{% url 'shufflesort:identity' %}" method="post">
         {% csrf_token %}
         <label for="deidentify">You are {{ request.session.user }}.</label>
         <input type="hidden" name="deidentify" />
@@ -20,6 +22,8 @@
       {% endif %}
     </header>
 
-    {% block content %}{% endblock %}
+    <article>
+      {% block content %}{% endblock %}
+    </article>
   </body>
 </html>

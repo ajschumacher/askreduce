@@ -5,6 +5,9 @@ body {
   font-family: "Book Antiqua", Palatino, "Palatino Linotype",
                "Palatino LT STD", Georgia, serif;
   line-height: 160%;
+}
+
+article {
   max-width: 40em;
   margin: auto;
   padding: 0 1em;
@@ -18,9 +21,18 @@ textarea {
   font-family: monospace;
 }
 
-header {
-  position: absolute;
-  right: 0px;
+header .home {
+  float: left;
+}
+
+header .deidentify {
+  float: right;
+  display: inline;
+  margin-left: auto;
+}
+
+article {
+  clear: both;
 }
 
 img {
