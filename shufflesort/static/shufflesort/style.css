@@ -17,8 +17,9 @@ textarea, input {
   font-size: inherit;
 }
 
-textarea {
+textarea, .answer {
   font-family: monospace;
+  line-height: normal;
 }
 
 header .home {
@@ -37,10 +38,6 @@ article {
 
 img {
   max-width: 100%;
-}
-
-pre {
-  line-height: normal;
 }
 
 a {

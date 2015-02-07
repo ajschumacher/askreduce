@@ -13,7 +13,11 @@
 {% if answered %}
 <ul>
   {% for answer in question.answer_set.all  %}
-  <li>{{ answer.user }}<pre>{{ answer.text }}</pre></li>
+  <li>{{ answer.user }}
+    <div class="answer">
+      {{ answer.text }}
+    </div>
+  </li>
   {% endfor %}
 </ul>
 {% endif %}
