@@ -7,7 +7,7 @@
   {% for question in question_list %}
   <li>
     <a href="{% url 'shufflesort:question' question.id %}">
-      {{ question.text }}
+      {{ question.text|slice:":60" }}
     </a>
   </li>
   {% endfor %}
