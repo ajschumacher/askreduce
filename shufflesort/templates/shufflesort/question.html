@@ -13,7 +13,7 @@
 {% if answered %}
 <ul>
   {% for answer in answers  %}
-  <li>{{ answer.user }}:
+  <li><a href="{% url 'shufflesort:user' answer.user %}">{{ answer.user }}</a>:
     <pre class="answer">{{ answer.text }}</pre>
   </li>
   {% endfor %}
