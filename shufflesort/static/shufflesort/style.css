@@ -15,6 +15,7 @@ article {
 
 textarea, input {
   font-size: inherit;
+  font-family: inherit;
 }
 
 textarea, .answer {
