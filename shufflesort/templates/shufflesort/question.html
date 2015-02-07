@@ -1,8 +1,10 @@
 {% extends "shufflesort/base.html" %}
 
+{% load markdown_filter %}
+
 {% block content %}
 
-<p>{{ question.text }}</p>
+{{ question.text|markdown_filter|safe }}
 
 <form action="{% url 'shufflesort:question' question.id %}" method="post">
   {% csrf_token %}

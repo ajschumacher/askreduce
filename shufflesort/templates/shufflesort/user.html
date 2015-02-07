@@ -1,5 +1,7 @@
 {% extends "shufflesort/base.html" %}
 
+{% load markdown_filter %}
+
 {% block content %}
 
 <p>{{ user_name }}</p>
@@ -7,9 +9,10 @@
 {% for question in questions %}
 <p>
   <a href="{% url 'shufflesort:question' question.question.id %}">
-    {{ question.question.id }}</a>.
-    {{ question.question.text }}
+    Question
+    {{ question.question.id }}</a>:
 </p>
+{{ question.question.text|markdown_filter|safe }}
 <ul>
   {% for answer in question.answers %}
   <li class="answer"><pre>{{ answer.text }}</pre></li>
