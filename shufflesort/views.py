@@ -55,7 +55,16 @@ class QuestionView(View):
 class UserView(View):
     @with_identity
     def get(self, request, user_name):
-        context = {'user_name': user_name,}
+        questions = Question.objects.all()
+        # presume questions are ordered by question ID
+        questions = [{'question': question,
+                      'answers': [],}
+                     for question in questions]
+        answers = Answer.objects.filter(user=user_name).order_by('-date')
+        for answer in answers:
+            questions[answer.question_id - 1]['answers'].append(answer)
+        context = {'user_name': user_name,
+                   'questions': questions,}
         return render(request, 'shufflesort/user.html', context)
 
 

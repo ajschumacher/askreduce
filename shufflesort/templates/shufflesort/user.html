@@ -4,4 +4,17 @@
 
 <p>{{ user_name }}</p>
 
+<ol>
+  {% for question in questions %}
+  <li>
+    <p>{{ question.question.text }}</p>
+    <ul>
+      {% for answer in question.answers %}
+      <li class="answer">{{ answer.text }}</li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ol>
+
 {% endblock %}
