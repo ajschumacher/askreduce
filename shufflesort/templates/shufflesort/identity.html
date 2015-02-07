@@ -2,9 +2,21 @@
 
 {% block content %}
 
+<p>This site uses a zero-security identity system.</p>
+
+<p>There is no registration and there are no passwords.</p>
+
+<p>Your identity on this site is whatever string you enter here.</p>
+
+<p>“Collisions” are possible.</p>
+
 <form action="{% url 'shufflesort:identity' %}" method="post">
   {% csrf_token %}
-  <input type="text" name="user" />
+  <label for="user">Your name: </label>
+  <input type="text" name="user" placeholder="Name"
+    {% if 'user' in request.session %}
+      value="{{request.session.user}}"
+    {% endif %} />
   <input type="submit" value="identify" />
 </form>
 
