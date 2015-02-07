@@ -15,7 +15,7 @@
       <form class="deidentify"
             action="{% url 'shufflesort:identity' %}" method="post">
         {% csrf_token %}
-        <label for="deidentify">You are {{ request.session.user }}.</label>
+        <label for="deidentify">You are “{{ request.session.user }}”.</label>
         <input type="hidden" name="deidentify" />
         <input type="submit" value="deidentify" />
       </form>
