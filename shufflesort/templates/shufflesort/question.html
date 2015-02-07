@@ -14,9 +14,7 @@
 <ul>
   {% for answer in answers  %}
   <li>{{ answer.user }}:
-    <div class="answer">
-      {{ answer.text }}
-    </div>
+    <pre class="answer">{{ answer.text }}</pre>
   </li>
   {% endfor %}
 </ul>

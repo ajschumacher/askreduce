@@ -10,7 +10,7 @@
     <p>{{ question.question.text }}</p>
     <ul>
       {% for answer in question.answers %}
-      <li class="answer">{{ answer.text }}</li>
+      <li class="answer"><pre>{{ answer.text }}</pre></li>
       {% endfor %}
     </ul>
   </li>
