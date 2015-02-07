@@ -68,6 +68,13 @@ class UserView(View):
         return render(request, 'shufflesort/user.html', context)
 
 
+class DashboardView(View):
+    @with_identity
+    def get(self, request):
+        context = {}
+        return render(request, 'shufflesort/dashboard.html', context)
+
+
 class IdentityView(View):
     def get(self, request):
         return render(request, 'shufflesort/identity.html')
