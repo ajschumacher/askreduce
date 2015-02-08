@@ -16,7 +16,7 @@
       </td>
       {% endfor %}
     </tr>
-    {% for user_name, answers in users_dict.items %}
+    {% for user_name, answers in users_tups %}
     <tr>
       <td>
         <a href="{% url 'shufflesort:user' user_name %}">

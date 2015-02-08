@@ -78,15 +78,15 @@ class DashboardView(View):
         for answer in answers:
             user = users.setdefault(answer.user, {})
             user[answer.question_id] = answer.text
-        user_names = sorted(users.keys(), reverse=True)
-        users_dict = {}
+        user_names = sorted(users.keys())
+        users_tups = []
         for user_name in user_names:
             user_row = [None] * len(question_ids)
             for index, question_id in enumerate(question_ids):
                 user_row[index] = users[user_name].get(question_id)
-            users_dict[user_name] = user_row
+            users_tups.append((user_name, user_row))
         context = {'question_ids': question_ids,
-                   'users_dict': users_dict,}
+                   'users_tups': users_tups,}
         return render(request, 'shufflesort/dashboard.html', context)
 
 
