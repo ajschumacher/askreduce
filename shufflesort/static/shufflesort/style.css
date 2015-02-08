@@ -41,7 +41,7 @@ header .deidentify {
   margin-left: auto;
 }
 
-article {
+article, section {
   clear: both;
 }
 
