@@ -10,7 +10,9 @@
       </td>
       {% for question_id in question_ids %}
       <td>
-        <a href="{% url 'shufflesort:question' question_id %}">{{ question_id }}</a>
+        <a href="{% url 'shufflesort:question' question_id %}">
+          {{ question_id }}
+        </a>
       </td>
       {% endfor %}
     </tr>
@@ -24,7 +26,10 @@
       {% for answer in answers %}
       <td>
         {% if answer %}
-        X
+        <a href="{% url 'shufflesort:user' user_name %}"
+           title="{{ answer }}">
+          ⬛
+        </a>
         {% endif %}
       </td>
       {% endfor %}
