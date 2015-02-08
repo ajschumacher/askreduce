@@ -477,3 +477,17 @@ Now you can run `raft.py` at the command line, as:
 
 
 :
+Try `import raft` from IPython. You'll see output. Refactor the `print` line into a `__main__` block so that you get no output when you `import`, but you get output when you run the script at the command line.
+
+::
+#!/usr/bin/env python
+
+raft_text = "one grade-a raft"
+
+if __name__ == '__main__':
+    print(raft_text)
+
+(This is also an example, slightly weird, of using `if` in Python.)
+
+
+:
