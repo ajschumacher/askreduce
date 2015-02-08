@@ -71,7 +71,22 @@ class UserView(View):
 class DashboardView(View):
     @with_identity
     def get(self, request):
-        context = {}
+        questions = Question.objects.all()
+        question_ids = [question.id for question in questions]
+        answers = Answer.objects.all()
+        users = {}
+        for answer in answers:
+            user = users.setdefault(answer.user, {})
+            user[answer.question_id] = answer.text
+        user_names = sorted(users.keys(), reverse=True)
+        users_dict = {}
+        for user_name in user_names:
+            user_row = [None] * len(question_ids)
+            for index, question_id in enumerate(question_ids):
+                user_row[index] = users[user_name].get(question_id)
+            users_dict[user_name] = user_row
+        context = {'question_ids': question_ids,
+                   'users_dict': users_dict,}
         return render(request, 'shufflesort/dashboard.html', context)
 
 

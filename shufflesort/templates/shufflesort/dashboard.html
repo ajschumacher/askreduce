@@ -3,7 +3,35 @@
 {% block body %}
 
 <section>
-<p>Here is a less-than-useful dashboard.</p>
+
+  <table>
+    <tr>
+      <td>
+      </td>
+      {% for question_id in question_ids %}
+      <td>
+        <a href="{% url 'shufflesort:question' question_id %}">{{ question_id }}</a>
+      </td>
+      {% endfor %}
+    </tr>
+    {% for user_name, answers in users_dict.items %}
+    <tr>
+      <td>
+        <a href="{% url 'shufflesort:user' user_name %}">
+          {{ user_name }}
+        </a>
+      </td>
+      {% for answer in answers %}
+      <td>
+        {% if answer %}
+        X
+        {% endif %}
+      </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+  
 </section>
 
 {% endblock %}
