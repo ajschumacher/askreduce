@@ -210,6 +210,8 @@ Read Evaluate Print Loop
 
 This is a common way to interact with (mostly) interpreted programming languages. A shell is (arguably) a REPL too.
 
+Consider a shell or Python REPL as a remote entity that has some internal state: variables, etc. You communicate with that entity by sending it text (programs, commands), it does things, and then it (often) sends back a response, again in text. The whole game is carefully choosing the text you send so that you produce the internal states and responses that will be helpful to you.
+
 
 :
 How do you start a basic Python REPL?
@@ -224,6 +226,7 @@ Use `type()` to find the types of these Python literals:
  * 42
  * 3.14
  * 'cow'
+ * True
  * [1, 2, 3]
 
 ::
@@ -233,6 +236,8 @@ Use `type()` to find the types of these Python literals:
 <type 'float'>
 >>> type('cow')
 <type 'str'>
+>>> type(True)
+<type 'bool'>
 >>> type([1, 2, 3])
 <type 'list'>
 
@@ -273,12 +278,22 @@ Experimenting at the REPL: Can you put elements of different types into the same
 ::
 Yes.
 
->>> [1, 3.4, "gnu"]
-[1, 3.4, 'gnu']
+>>> [1, 3.4, False, "gnu",]
+[1, 3.4, False, 'gnu']
 
 
 :
-What is `5 / 2` according to Python?
+Experimenting at the REPL: What does the Python operator "**" do?
+
+::
+>>> 2**3
+8
+
+This is exponentiation.
+
+
+:
+Experimenting at the REPL: What is `5 / 2` according to Python?
 
 ::
 In Python 2:
@@ -434,7 +449,7 @@ Without leaving IPython, go to your home directory, make and enter a directory c
 Open `raft.py` in your editor and make it contain:
 
     raft_text = "one grade-a raft"
-    print(raft_text)
+    print raft_text
 
 How do these compare?
 
@@ -485,9 +500,488 @@ Try `import raft` from IPython. You'll see output. Refactor the `print` line int
 raft_text = "one grade-a raft"
 
 if __name__ == '__main__':
-    print(raft_text)
+    print raft_text
 
 (This is also an example, slightly weird, of using `if` in Python.)
 
 
 :
+Python modules usually don't have output (or do anything, in fact) when they are imported. One exception is the `this` module. Try `import this`.
+
+::
+import this
+
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+
+(Notice the emphasis on namespaces.)
+
+
+:
+After `import raft`, how can you access the `raft_text`?
+
+::
+import raft
+raft.raft_text
+
+
+:
+What if you want to import `raft_text` without the `raft` module namespace? Give two ways to import it directly.
+
+::
+One way:
+from raft import raft_text
+
+Another way:
+from raft import *
+
+The second way, with the *, is less well-liked because it imports everything to the root namespace, which can clutter the namespace with tons of identifiers.
+
+
+:
+What if you don't like the provided name? How can you import `raft_text` as `rt`, for example?
+
+::
+from raft import raft_text as rt
+
+You can do this for modules as well, like:
+import raft as super_cool_raft
+
+
+:
+What are the common import lines for `numpy` and `pandas`?
+
+::
+import numpy as np
+import pandas as pd
+
+You'll use these a lot, eventually.
+
+
+:
+If you change and save a file you're treating as a module, like `raft.py`, how can you reload it into a Python REPL?
+
+::
+Assuming you initially did `import raft`:
+reload(raft)
+
+We'll do more with this in a moment.
+
+
+:
+How do you run IPython Notebook on your computer?
+
+::
+One popular invocation is:
+
+ipython notebook --pylab=inline
+
+Whether to load `pylab` is up to you; many find it useful.
+
+(There's also the Anaconda Launcher.)
+
+
+:
+How do you run Spyder on your computer?
+
+::
+You can start it from the command line:
+
+spyder
+
+(There's also the Anaconda Launcher.)
+
+
+:
+Ensure Spyder is using IPython. What is your present working directory? How do you change it to be `~/survival/`?
+
+::
+You can do it before inside the IPython terminal, or use the GUI: "Browse a working directory" and then "Set as current console's working directory" in the upper right.
+
+
+:
+Open `raft.py` in the Spyder editor. How do you run a selection from the editor?
+
+::
+Select what you want to run, then (on a Mac) press Command-Enter.
+
+There are many more ways to execute sections of Python code inside Spyder. Feel free to explore the interface.
+
+
+:
+What's the value of `x`, `y`, and `z` after this?
+
+    x = [1, 2, 3]
+    y = x + [4]
+    z = x.append(5)
+
+::
+x is [1, 2, 3, 5]
+y is [1, 2, 3, 4]
+z is None
+
+Be careful with this sort of thing! Check carefully as you code!
+
+
+:
+Extension: How can you check whether a variable is `None`?
+
+::
+Use `is`. For example, the following is not uncommon:
+
+if x is not None:
+    # Do something about x
+
+
+:
+What other methods are there for lists?
+
+How can you get help on list methods?
+
+How can you get the LENgth of a list?
+
+::
+Using `dir()` or tab completion on a list (or `list`):
+
+append
+count
+extend
+index
+insert
+pop
+remove
+reverse
+sort
+
+Help still works via e.g., `help(list.pop)` or `?list.pop`.
+
+The `len` function will give you the length.
+
+>>> len([1, 2, 3])
+3
+
+Other useful functions include `sorted`, `reverse`, and `sum`.
+
+
+:
+Can you add a list and an integer? What about multiplication? What about a string and an integer? Can you add a string and a string? What happens?
+
+::
+You should find some useful phenomena.
+
+
+:
+Python functions are defined like this:
+
+    def silly_subtract(x, y):
+        return x - y
+
+Load this definition in your REPL. Some of the following will fail. Why?
+
+ * `silly_subtract(10, 7)`
+ * `silly_subtract(10, y=7)`
+ * `silly_subtract(x=10, 7)`
+ * `silly_subtract(x=10, y=7)`
+ * `silly_subtract(y=7, 10)`
+ * `silly_subtract(y=7, x=10)`
+
+::
+The ones that don't work produce `SyntaxError: non-keyword arg after keyword arg`, which should make sense.
+
+
+:
+Put a function `make_rafts` in `raft.py` that takes arguments `num_rafts` and `num_passengers`. It should return a list of `num_rafts` strings, and each "raft" string should be all asterisks, and `num_passengers` long.
+
+::
+def make_rafts(num_rafts, num_passengers):
+    return ["*" * num_passengers] * num_rafts
+
+
+:
+Give `num_passengers` a default value of 8.
+
+::
+def make_rafts(num_rafts, num_passengers=8):
+    return ["*" * num_passengers] * num_rafts
+
+
+:
+Add a multi-line comment in docstring position for the function, explaining what it does. (Note that [PEP 8](https://www.python.org/dev/peps/pep-0008/) suggests code lines be no longer than 79 characters, and text lines no longer than 72.)
+
+::
+def make_rafts(num_rafts, num_passengers=8):
+    """
+    Returns a list of `num_rafts` strings with each "raft" string
+    being `num_passengers` asterisks.
+    """
+    return ["*" * num_passengers] * num_rafts
+
+Style conventions for docstrings may vary, but whatever the style, the docstring of a loaded function is what you get back from `help`, so make it helpful.
+
+
+:
+Change the `__main__` block to print the result of `make_rafts(1)`.
+
+::
+if __name__ == '__main__':
+    print make_rafts(1)
+
+
+:
+Extension: Make the `raft.py` script accept command-line input for the number of rafts.
+
+
+:
+You aren't using the `raft_text` any more. Comment it out using a one-line comment.
+
+::
+# raft_text = "one grade-a raft"
+
+
+:
+DON'T COMMENT OUT CODE. Version control preserves old code; don't litter your code with carcasses. Remove the `raft_text` line entirely.
+
+::
+(the line is gone)
+
+This rule doesn't apply to quick experiments, but in general you really don't want to be carrying around dead code. It makes things confusing and harder to maintain.
+
+Line comments should be used to include natural human language that helps make an algorithm clearer, for example.
+
+
+:
+What does `make_rafts` do when it receives a negative `num_rafts`? Add behavior to `raise ValueError("Helpful message")` on untenable arguments.
+
+::
+def make_rafts(num_rafts, num_passengers=8):
+    """
+    Returns a list of `num_rafts` strings with each "raft" string
+    being `num_passengers` asterisks.
+    """
+    if num_rafts < 0 or num_passengers < 0:
+        raise ValueError("Negative quantities don't make sense!")
+    return ["*" * num_passengers] * num_rafts
+
+
+:
+Extension: You can write some one-line `if` statements (etc.) in Python. This is sometimes discouraged because it can be less readable. But say you want `x` to be 'big' if `y` is over 10, and 'small' otherwise. How can you do it in one line?
+
+::
+x = 'small' if y < 20 else 'big'
+
+
+:
+Write a `for` loop that announces the departure of four rafts (by number) using `range`.
+
+::
+for raft_id in range(4):
+    print "raft", raft_id + 1, "is away!"
+
+Other ways to print:
+
+print "raft %s is away!" % (raft_id + 1)
+
+print "raft " + str(raft_id + 1) + " is away!"
+
+
+:
+Write a `for` loop that prints out each raft from `make_rafts(4)` on its own line.
+
+::
+for raft in make_rafts(4):
+    print raft
+
+
+:
+Write a `for` loop that prints out each raft from `make_rafts(4)` on its own line, but with each subsequent raft farther from the shore.
+
+::
+for raft_id, raft in enumerate(make_rafts(4)):
+    print " " * raft_id + raft
+
+This is using tuple unpacking to assign to `raft_id` and `raft`.
+
+
+:
+Say `x` and `y` have values. How can you swap their values in one line? How does this demonstrate tuple packing and unpacking?
+
+::
+x = 1
+y = 100
+x, y = y, x
+(x, y) = y, x
+x, y = (y, x)
+(x, y) = (y, x)
+
+
+:
+The `random` module includes a function `randint`. Write a new function `used_rafts` that takes one argument, `num_rafts`, and returns that many rafts with random capacities from 2 to 12.
+
+::
+from random import randint
+#...
+def used_rafts(num_rafts):
+    """
+    Returns a list of `num_rafts` strings with each "raft" string
+    being randomly from two to twelve asterisks.
+    """
+    rafts = []
+    for _ in range(num_rafts):
+        rafts.append("*" * randint(2, 12))
+    return rafts
+
+
+:
+Get a dozen used rafts and make a new list with the lengths of each raft.
+
+::
+rafts = used_rafts(12)
+lengths = []
+for raft in rafts:
+    lengths.append(len(raft))
+
+
+:
+Get a dozen used rafts and make a new list with the lengths of each raft, but only use one line of code to do it.
+
+::
+rafts = used_rafts(12)
+lengths = [len(raft) for raft in rafts]
+
+This is called a list comprehension.
+
+
+:
+Extension: How can you use `map` to achieve the same result?
+
+
+:
+You can add an "if" filter to the end of a list comprehension. Write a line that gives you just the rafts that seat more than six.
+
+::
+[raft for raft in rafts if 6 < len(raft)]
+
+
+:
+Extension: How can you use `filter` to achieve the same result?
+
+
+:
+Add up the lengths of all the rafts.
+
+::
+sum(len(raft) for raft in rafts)
+
+(That isn't quite a "list" comprehension, but it works.)
+
+
+:
+Extension: How can you use `reduce` to achieve the same result?
+
+
+:
+Re-write `used_rafts` to use a list comprehension.
+
+::
+def used_rafts(num_rafts):
+    """
+    Returns a list of `num_rafts` strings with each "raft" string
+    being randomly from two to twelve asterisks.
+    """
+    return ["*" * randint(2, 12) for _ in range(num_rafts)]
+
+
+:
+Extension: Some functions take other functions as arguments. The `key` argument to the `sorted` function is itself a function, for example. Say you want to sort your rafts by how close they are to 7-passenger, for some reason. How would you do this?
+
+::
+sorted(rafts, key=lambda x: abs(len(x) - 7))
+
+In Python the lambda syntax lets you define anonymous (nameless) functions. For example, these are equivalent:
+
+def myfun(x):
+    return x**2
+
+myfun = lambda x: x**2
+
+
+:
+Sort your rafts.
+
+::
+rafts = sorted(rafts)
+
+(This happens to work in a reasonable way because of the default sort for strings.)
+
+
+:
+Use slicing to get the first raft.
+
+::
+rafts[0]
+
+
+:
+Use slicing to get the last raft.
+
+::
+rafts[-1]
+
+
+:
+Use slicing to get the second and third rafts.
+
+::
+rafts[1:3]
+
+
+:
+Use slicing to get the first two rafts.
+
+rafts[:2]
+
+This is very useful for checking out a small part of a big list!
+
+
+:
+Use slicing to get the last two rafts.
+
+::
+rafts[-2:]
+
+This is very useful for checking out a small part of a big list!
+
+
+:
+Use slicing to get every other raft.
+
+::
+rafts[::2]
+
+
+:
+Use slicing to get the rafts in reverse order.
+
+::
+rafts[::-1]
+
+
