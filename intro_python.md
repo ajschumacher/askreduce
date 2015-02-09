@@ -1,5 +1,7 @@
 *An introductory problem sequence for learning Python with askreduce.*
 
+coverage notes:
+https://github.com/justmarkham/DAT4/blob/master/code/00_python_refresher.py
 
 :
 How do you open a terminal on your computer? How did this terminal software get on your computer?
@@ -769,7 +771,7 @@ Line comments should be used to include natural human language that helps make a
 
 
 :
-What does `make_rafts` do when it receives a negative `num_rafts`? Add behavior to `raise ValueError("Helpful message")` on untenable arguments.
+What does `make_rafts` do when it receives a negative `num_rafts`? Add behavior so `make_rafts` will `raise ValueError("Helpful message")` on negative arguments.
 
 ::
 def make_rafts(num_rafts, num_passengers=8):
@@ -781,12 +783,31 @@ def make_rafts(num_rafts, num_passengers=8):
         raise ValueError("Negative quantities don't make sense!")
     return ["*" * num_passengers] * num_rafts
 
+Raising an exception breaks out of normal function execution so we never make it to the `return`.
+
 
 :
 Extension: You can write some one-line `if` statements (etc.) in Python. This is sometimes discouraged because it can be less readable. But say you want `x` to be 'big' if `y` is over 10, and 'small' otherwise. How can you do it in one line?
 
 ::
 x = 'small' if y < 20 else 'big'
+
+
+:
+Python has `else` like you'd expect. It's "else if" is `elif`. Write a quick function that takes a Fahrenheit temperature and returns the state of water at that temperature (at standard pressure).
+
+::
+def state_of_water_at(degrees_F):
+    if degrees_F <= 32:
+        return "solid"
+    elif degrees_F < 212:
+        return "liquid"
+    else:
+        return "gas"
+
+I'm not actually sure about whether those inequalities should be strict.
+
+I prefer to use "<" and "<=" rather than ">" and ">=" because then everything reads like a number line and ranges read easily.
 
 
 :
@@ -848,6 +869,8 @@ def used_rafts(num_rafts):
     for _ in range(num_rafts):
         rafts.append("*" * randint(2, 12))
     return rafts
+
+It's a convention in Python to use the variable `_` when it won't be used. It also stores the most recent result in the REPL.
 
 
 :
@@ -911,6 +934,13 @@ def used_rafts(num_rafts):
 
 
 :
+Extension: You can write nested comprehensions. Write one to produce a list of all two-element tuples where each element is from the numbers 1 to 10.
+
+::
+[(a, b) for a in range(1, 11) for b in range(1, 11)]
+
+
+:
 Extension: Some functions take other functions as arguments. The `key` argument to the `sorted` function is itself a function, for example. Say you want to sort your rafts by how close they are to 7-passenger, for some reason. How would you do this?
 
 ::
@@ -934,14 +964,22 @@ rafts = sorted(rafts)
 
 
 :
-Use slicing to get the first raft.
+Use list indexing to get the first raft.
 
 ::
 rafts[0]
 
 
 :
-Use slicing to get the last raft.
+Change the first raft to be illegally short.
+
+::
+rafts[0] = "*"
+print rafts # changed in place!
+
+
+:
+Use list indexing to get the last raft.
 
 ::
 rafts[-1]
@@ -985,3 +1023,134 @@ Use slicing to get the rafts in reverse order.
 rafts[::-1]
 
 
+:
+They aren't the exactly lists, but a lot of the indexing/slicing that works for lists also works for strings. How can you get the year part from the string "2015-02-14"?
+
+::
+>>> "2015-02-14"[:4]
+'2015'
+
+:
+Extension: Learn about how to read and write Python `datetime` objects to and from various string and numeric formats using the `date` and `datetime` modules (and/or others).
+
+
+:
+Extension: Learn about using regular expressions in Python using the `re` module.
+
+
+:
+There's a common Python trick for making a string into a list of characters. How can you make "alphabet" into a list containing the letters in "alphabet"?
+
+::
+>>> list("alphabet")
+['a', 'l', 'p', 'h', 'a', 'b', 'e', 't']
+
+
+:
+What is the length of `set([1, 1, 2, 2, 3])`?
+
+::
+>>> len(set([1, 1, 2, 2, 3]))
+3
+
+
+:
+What is the length of `set("alphabet")`?
+
+::
+>>> len(set("alphabet"))
+7
+
+
+:
+What operations are there on a set?
+
+::
+From `dir(set())`:
+
+add
+clear
+copy
+difference
+difference_update
+discard
+intersection
+intersection_update
+isdisjoint
+issubset
+issuperset
+pop
+remove
+symmetric_difference
+symmetric_difference_update
+union
+update
+
+You can also use shorthand infix operators for set operations:
+
+"|", like "or", gives "union"
+"&", like "and", gives "intersection"
+"-", like "minus", gives "difference"
+
+
+:
+You can use `in` to check whether an element is in a collection. Both of these work, evaluating to a boolean:
+
+    'a' in ['cow', 'ant', 'a', 'b']
+    'a' in set(['cow', 'ant', 'a', 'b'])
+
+Why would one be preferred over the other?
+
+::
+Checking for membership in a list requires a full pass through the data (linear time). Checking for membership in a set happens in constant time (after the set is set up). So if you have a lot of checks to do, using a set will be faster.
+
+
+:
+Extension: Use %timeit (in IPython) to examine performance differences between lists and sets.
+
+::
+For example:
+
+In [80]: big_list = range(int(1e6))
+
+In [81]: big_set = set(range(int(1e6)))
+
+In [82]: %timeit 'a' in big_list
+10 loops, best of 3: 70.7 ms per loop
+
+In [83]: %timeit 'a' in big_set
+10000000 loops, best of 3: 110 ns per loop
+
+The check against the set is around 600,000 times faster.
+
+IPython also has %time, %%time, and %%timeit.
+
+
+:
+Can you use `in` to check whether "car" is in "carapace"?
+
+::
+Yes.
+
+>>> "car" in "carapace"
+True
+
+
+:
+You can write set literals like lists with curly braces, and set comprehensions. Make a set of the squares of the first seven positive integers.
+
+::
+>>> {x**2 for x in range(1, 8)}
+set([1, 36, 9, 16, 49, 25, 4])
+
+Notice that there is no guarantee for element order.
+
+
+:
+Is `set([1, 2, 3])` the same thing as `{1, 2, 3}`? Is `set()` the same as `{}`? Why?
+
+::
+The curly brace notation works for sets except for the empty set, because Python dicts also use curly braces so it's ambiguous and the dict syntax dominates.
+
+>>> type({})
+<type 'dict'>
