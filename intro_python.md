@@ -711,6 +711,23 @@ The ones that don't work produce `SyntaxError: non-keyword arg after keyword arg
 
 
 :
+What does a function with no `return` statement do?
+
+::
+>>> def no_return():
+...     x = 5
+...
+>>> v = no_return()
+>>> v
+>>> type(v)
+<type 'NoneType'>
+>>> v is None
+True
+
+It returns `None`. Note that it does *not* return the last evaluated expression, as is common in other languages.
+
+
+:
 Put a function `make_rafts` in `raft.py` that takes arguments `num_rafts` and `num_passengers`. It should return a list of `num_rafts` strings, and each "raft" string should be all asterisks, and `num_passengers` long.
 
 ::
@@ -822,6 +839,10 @@ Other ways to print:
 print "raft %s is away!" % (raft_id + 1)
 
 print "raft " + str(raft_id + 1) + " is away!"
+
+
+:
+Extension: In Python 2, `range` returns a list, completely realized. `xrange` returns something else. You will eventually want to learn about [generators](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) and you might test your knowledge by making your own version of `range` that returns one element at a time.
 
 
 :
@@ -1127,7 +1148,7 @@ IPython also has %time, %%time, and %%timeit.
 
 
 :
-Can you use `in` to check whether "car" is in "carapace"?
+Can you use `in` to check whether the string "car" exists as a substring of "carapace"?
 
 ::
 Yes.
@@ -1154,3 +1175,250 @@ The curly brace notation works for sets except for the empty set, because Python
 
 >>> type({})
 <type 'dict'>
+
+
+:
+The Python `dict` is a very useful data structure. In other languages, close equivalents may have names like hash, hash-map, map, associative array, or even (what are you doing, JavaScript?) object. Python dict literals look like this:
+
+    {'a key name': 'a corresponding value',}
+
+Keys and values can be any Python thing, including other dicts.
+
+What methods are there on dicts?
+
+::
+clear
+copy
+fromkeys
+get
+has_key
+items
+iteritems
+iterkeys
+itervalues
+keys
+pop
+popitem
+setdefault
+update
+values
+viewitems
+viewkeys
+viewvalues
+
+
+:
+You can read and write dict values via square bracket notation like this:
+
+    x = {1: 4, 2: 8,}
+    x[2] # 8
+    x[3] = 12
+    x[3] # 12
+
+What happens if you use this kind of indexing to access a key that isn't in a dict?
+
+::
+>>> {}['nope']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'nope'
+
+
+:
+Write a function `counted` that takes a list and returns a dict in which elements of the passed list are keys and the values are the number of times the element appears. So:
+
+    counted(['one', 'two', 'one']) == {'one': 2, 'two': 1}
+
+::
+def counted(items):
+    result = {}
+    for item in items:
+        if item not in result:
+            result[item] = 1
+        else:
+            result[item] += 1
+    return result
+
+
+:
+Use `.get` to get a default value when you access a dict by a nonexistent key.
+
+::
+>>> {}.get('nope', 'but this instead')
+'but this instead'
+
+
+:
+Use `.get` to re-write `counted`.
+
+::
+def counted(items):
+    result = {}
+    for item in items:
+        result[item] = result.get(item, 0) + 1
+
+
+:
+Extension: Learn about `collections.Counter`, which does all this kind of counting for you more easily.
+
+
+:
+Does `.get` (by itself) affect the dict it's called on?
+
+::
+No.
+
+
+:
+Write a function `by_first` that takes a list of strings and returns a dict where the keys are initial letters of the strings and the values are lists of the provided words that start with that letter.
+
+::
+def by_first(words):
+    result = {}
+    for word in words:
+        letter_words = result.get(word[:1], [])
+        letter_words.append(word)
+        result[word[:1]] = letter_words
+
+:
+Does `.setdefault` change the dict it's called on, when the key is not found?
+
+::
+Yes.
+
+
+:
+Re-write `by_first` using `.setdefault`:
+
+::
+def by_first(words):
+    result = {}
+    for word in words:
+        results.setdefault(word[:1], []).append(word)
+
+
+:
+Extension: Learn about `collections.defaultdict`, which does all this kind of defaulting for you more easily.
+
+
+:
+What does this produce? How is it produced? Explain each step.
+
+    dict(zip("asdf", range(4)))
+
+::
+This produces the dict {'a': 0, 's': 1, 'd': 2, 'f': 3}.
+
+1. The string "asdf" is interpreted as the list ['a', 's', 'd', 'f'].
+2. range(4) becomes the list [1, 2, 3, 4].
+3. zip takes the two lists and makes a list of tuples, [('a', 0), ('s', 1), ('d', 2), ('f', 3)]
+4. dict builds a dict with the first elements in the tuples as keys and the second elements in the tuples as values.
+
+
+:
+Write a function `explain` that takes a dict and prints out "key is value" for each key-value pair. (Use `.items` or `.iteritems`.)
+
+::
+def explain(this_dict):
+    for key, value in this_dict.items():
+        print "{} is {}".format(key, value)
+
+
+:
+Extension: What is the dict `.update` method good for?
+
+
+:
+Files. You can open a file with `open`. By default, the file is opened read-only. Don't forget to close your files!
+
+    f = open('filename')
+    # read f and do something
+    f.close()
+
+What methods do you have on a file object? Which ones are for reading? How do they vary?
+
+Note that you can iterate through a file object as if it were a list.
+
+Write a function `show` that takes a filename and prints out all the lines of the file.
+
+::
+def show(filename):
+    f = open('filename')
+    for line in f:
+        print line
+    f.close()
+
+
+:
+Managing all this closing of open things is a drag, and it could get screwed up if there are exceptions and so on. Python has context managers that make this easier:
+
+    with open('filename') as f:
+        # do something with f
+
+Write a function `lines_of` that takes a filename and returns a list of strings, one per line from the file.
+
+::
+def lines_of(filename):
+    with open(filename) as f:
+        return [line for line in f]
+
+
+:
+What string method(s) can you use to remove trailing newlines from strings like "a line of text\n"?
+
+::
+.rstrip and .strip are good candidates, as well as (possibly) .replace.
+
+
+:
+Use `.split` to make a function `read_csv` that takes a filename and (naively) reads in a CSV file as a list of lists.
+
+::
+def read_csv(filename):
+    with open(filename) as f:
+        return [line.strip().split(",") for line in f]
+
+
+:
+CSV is more complicated than that! RFC whatever it is! Re-write `read_csv` using the csv module.
+
+::
+import csv
+
+def read_csv(filename):
+    with open(filename) as f:
+        return [line for line in csv.reader(f)]
+
+
+:
+Extension: Read in a CSV file with `csv.DictReader`. When might you prefer this approach?
+
+
+:
+How can you open a file so that you can write to it?
+
+::
+open('filename', 'w')
+
+
+:
+Extension: Look into the `codecs` module for how to ensure you're working with UTF-8.
+
+
+:
+Extension: Write a function `rand_word` that generates random five-letter words.
+
+::
+import string
+import random
+
+def rand_word():
+    return "".join(random.sample(string.letters, 5))
+
+
+:
+Extension: Generate a random CSV file, five columns and 100 rows, with all elements random five-letter words.
+
+
+:
+Extension: Read a CSV file in, capitalize its second field, and write a new CSV file out.
