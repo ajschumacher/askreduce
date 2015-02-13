@@ -1068,6 +1068,13 @@ There's a common Python trick for making a string into a list of characters. How
 
 
 :
+The normal way to concatenate a list of strings is a little weird in Python. `"".join(['a', 'b', 'c'])` gives `"abc"`. Can you produce "on and on and on" without typing "on" or "and" more than once?
+
+::
+" and ".join(["on"] * 3)
+
+
+:
 What is the length of `set([1, 1, 2, 2, 3])`?
 
 ::
@@ -1388,6 +1395,13 @@ import csv
 def read_csv(filename):
     with open(filename) as f:
         return [line for line in csv.reader(f)]
+
+
+:
+Write a list comprehension over a list of lists (as from a CSV) that returns only the first column of data as a list.
+
+::
+first_col = [line[0] for line in list_of_lists]
 
 
 :
