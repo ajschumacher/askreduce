@@ -1380,7 +1380,7 @@ def read_csv(filename):
 
 
 :
-CSV is more complicated than that! RFC whatever it is! Re-write `read_csv` using the csv module.
+CSV is more complicated than that! (See [RFC 4180](https://tools.ietf.org/html/rfc4180).) Re-write `read_csv` using the csv module.
 
 ::
 import csv
