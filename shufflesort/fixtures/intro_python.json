@@ -1,2304 +1,2304 @@
 [
   {
-    "pk": 1,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How do you open a terminal on your computer? How did this terminal software get on your computer?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 1
   },
   {
-    "pk": 1,
     "model": "shufflesort.answer",
     "fields": {
       "question": 1,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "On a modern Mac, you will have Terminal.app pre-installed in Applications/Utilities, which works fine. It's a good idea to \"Keep in Dock\" so that it's easy to get to.\n\niTerm2 is another popular terminal emulator for Macs, which you can download and install separately if you like.\n\nOn Windows, cmd.exe will give you a Windows \"command line\" of entirely the wrong kind. The Windows PowerShell is much better, but not recommended. You should use Git Bash, which you should get along with Git when you install from git-scm.com. It's a good idea to keep Git Bash easily accessible.\n\nOn *nix systems, you have lots of choices for terminals. The one that comes with your GUI system is probably fine. You may have access to virtual consoles, but these are not very commonly used for normal work.\n\nA terminal emulator is a bit like a web browser in that it provides a more or less standard environment for a certain class of applications to run and provide an interface.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 1
   },
   {
-    "pk": 2,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What shell are you connected to via your terminal?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 2
   },
   {
-    "pk": 2,
     "model": "shufflesort.answer",
     "fields": {
       "question": 2,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Most people run bash as it is usually the default. Other alternatives include Z shell (zsh) and KornShell (ksh). The Z shell wrapper package oh-my-zsh is reasonably popular.\n\nYou can usually check your shell by running `echo $0`.\n\nA shell is a program that provides a text-based interface to an operating system. It lets you run other programs, including other shells.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 2
   },
   {
-    "pk": 3,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What are three ways to find the absolute path to your home directory?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 3
   },
   {
-    "pk": 3,
     "model": "shufflesort.answer",
     "fields": {
       "question": 3,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "One way:\ncd\npwd\n\nAnother way:\necho ~\n\nYet another way:\necho $HOME\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 3
   },
   {
-    "pk": 4,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What environment variable controls the appearance of your shell prompt?\n\nWhat are two different ways to display the contents of this variable?\n\nHow can you set the contents of this variable to be just \"$ \"?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 4
   },
   {
-    "pk": 4,
     "model": "shufflesort.answer",
     "fields": {
       "question": 4,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Prompt appearance is controlled by `PS1`.\n\nTo get just `PS1`:\necho $PS1\n\nTo get all environment variables:\nenv\n\nTo set `PS1`:\nexport PS1=\"$ \"\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 4
   },
   {
-    "pk": 5,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Compare a shell such as bash with Python. Is Python a shell?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 5
   },
   {
-    "pk": 5,
     "model": "shufflesort.answer",
     "fields": {
       "question": 5,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Sort of! Especially IPython!\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 5
   },
   {
-    "pk": 6,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What are at least two ways to close a shell/terminal?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 6
   },
   {
-    "pk": 6,
     "model": "shufflesort.answer",
     "fields": {
       "question": 6,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Depending on your system, `exit`, `logout`, using windowing system navigation (such as clicking something), and especially CTRL-D.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 6
   },
   {
-    "pk": 7,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What does CTRL-C do?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 7
   },
   {
-    "pk": 7,
     "model": "shufflesort.answer",
     "fields": {
       "question": 7,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "CTRL-C will attempt to kill or otherwise stop a current process. It's very useful if you get into an infinite loop, for example.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 7
   },
   {
-    "pk": 8,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What other keyboard shortcuts are useful for navigating text interfaces?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 8
   },
   {
-    "pk": 8,
     "model": "shufflesort.answer",
     "fields": {
       "question": 8,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You should be fluent with at least the following, where \"C\" is CTRL and \"M\" is usually \"ALT\":\n\nC-a: go to beginning of line\nC-e: go to end of line\nC-b: go back one character\nM-b: go back one word\nC-f: go forward one character\nM-f: go forward one word\nC-p: previous\nC-n: next\nC-r: reverse search\nC-l: clear screen\nC-k: kill to end of line (cut)\nC-y: yank (paste)\nC-t: transpose character\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 8
   },
   {
-    "pk": 9,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What text editor do you use? How do you start it? How did it get on your system?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 9
   },
   {
-    "pk": 9,
     "model": "shufflesort.answer",
     "fields": {
       "question": 9,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You should be able to survive if you have only a terminal interface. `nano` is a good choice in a pinch because you can use it with the on-screen help.\n\nIt is a good idea to be comfortable with at least one of the two major coding editors: `vim` and `emacs`. There's some learning curve.\n\nA GUI editor like Sublime Text, Atom, or even Notepad++ is not necessarily a bad choice for most work.\n\nAn IDE such as IDLE, Spyder, or PyCharm is also not necessarily a bad choice.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 9
   },
   {
-    "pk": 10,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How did you install Anaconda Python 2.7?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 10
   },
   {
-    "pk": 10,
     "model": "shufflesort.answer",
     "fields": {
       "question": 10,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "This should be easy; see http://continuum.io/downloads\n\n\n: How can you check your Python version?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 10
   },
   {
-    "pk": 11,
     "model": "shufflesort.answer",
     "fields": {
       "question": 10,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "python --version\n\nMake sure you are running the version you think you are!\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 11
   },
   {
-    "pk": 11,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How can you check which executable runs when you type `python` at a shell?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 11
   },
   {
-    "pk": 12,
     "model": "shufflesort.answer",
     "fields": {
       "question": 11,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "which python\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 12
   },
   {
-    "pk": 12,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Where will your shell look for programs to run for you?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 12
   },
   {
-    "pk": 13,
     "model": "shufflesort.answer",
     "fields": {
       "question": 12,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "echo $PATH\n\nYou can alter your PATH just as we altered PS1. Anaconda works by altering your PATH so that the Anaconda Python is found first.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 13
   },
   {
-    "pk": 13,
     "model": "shufflesort.question",
     "fields": {
+      "text": "Where does bash read its initial configuration from?\n",
       "date": "1999-12-31T23:59:00.000Z",
-      "text": "What other configuration can you do?\n",
       "user": "Aaron"
-    }
+    },
+    "pk": 13
   },
   {
-    "pk": 14,
     "model": "shufflesort.answer",
     "fields": {
       "question": 13,
+      "text": "You can do so much configuration. Bash reads configuration from .bash_profile and .bashrc, for instance. You can get way into customizing your environment, and it can make you more effective and happier. I post my configuration here:\n\nhttps://github.com/ajschumacher/.emacs.d\n\n",
       "date": "1999-12-31T23:59:00.000Z",
-      "text": "So much. Bash reads configuration from .bash_profile and .bashrc, for instance. You can get way into customizing your environment, and it can make you more effective and happier. I post my configuration here:\n\nhttps://github.com/ajschumacher/.emacs.d\n\n",
       "user": "Aaron"
-    }
+    },
+    "pk": 14
   },
   {
-    "pk": 14,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What is the standard method for installing Python packages?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 14
   },
   {
-    "pk": 15,
     "model": "shufflesort.answer",
     "fields": {
       "question": 14,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "pip install packagename\n\n`pip` will find `packagename` on the Python Package Index (PyPI) and download and install it.\n\nAnaconda has its own package management scheme, \"conda,\" which I will continue to ignore.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 15
   },
   {
-    "pk": 15,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How can you see all the Python packages you currently have installed?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 15
   },
   {
-    "pk": 16,
     "model": "shufflesort.answer",
     "fields": {
       "question": 15,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "One way:\npip list\n\nAnother way:\npip freeze\n\nThe second way produces `requirements.txt` files that are used for coordinating versions across project teams, and for your own sanity.\n\nPython developers use virtual environments to manage multiple projects with multiple sets of dependencies. You can find out more about `virtualenv` and the tools that make working with it easier, such as `virtualenvwrapper` and `pew`. We aren't going into this today, but you may want to eventually.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 16
   },
   {
-    "pk": 16,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How can you easily check whether you have a Python package installed?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 16
   },
   {
-    "pk": 17,
     "model": "shufflesort.answer",
     "fields": {
       "question": 16,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "pip freeze | grep packagename\n\nThis is a shell technique for piping the output from one program to another - in this case, `grep`. `grep` is insanely useful even in the simple form shown here. Don't search with your eyes - the computer can search for you!\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 17
   },
   {
-    "pk": 17,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Install the Python package called \"gogpy\". What is the current version?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 17
   },
   {
-    "pk": 18,
     "model": "shufflesort.answer",
     "fields": {
       "question": 17,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "pip install gogpy\npip freeze | grep gogpy\n\nThere are other ways to check this, but what's shown is a pretty common pattern.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 18
   },
   {
-    "pk": 18,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What does REPL stand for?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 18
   },
   {
-    "pk": 19,
     "model": "shufflesort.answer",
     "fields": {
       "question": 18,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Read Evaluate Print Loop\n\nThis is a common way to interact with (mostly) interpreted programming languages. A shell is (arguably) a REPL too.\n\nConsider a shell or Python REPL as a remote entity that has some internal state: variables, etc. You communicate with that entity by sending it text (programs, commands), it does things, and then it (often) sends back a response, again in text. The whole game is carefully choosing the text you send so that you produce the internal states and responses that will be helpful to you.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 19
   },
   {
-    "pk": 19,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How do you start a basic Python REPL?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 19
   },
   {
-    "pk": 20,
     "model": "shufflesort.answer",
     "fields": {
       "question": 19,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "python\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 20
   },
   {
-    "pk": 20,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use `type()` to find the types of these Python literals:\n\n * 42\n * 3.14\n * 'cow'\n * True\n * [1, 2, 3]\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 20
   },
   {
-    "pk": 21,
     "model": "shufflesort.answer",
     "fields": {
       "question": 20,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> type(42)\n<type 'int'>\n>>> type(3.14)\n<type 'float'>\n>>> type('cow')\n<type 'str'>\n>>> type(True)\n<type 'bool'>\n>>> type([1, 2, 3])\n<type 'list'>\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 21
   },
   {
-    "pk": 21,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Experimenting at the REPL: Does it matter whether you use single or double quotes around Python strings?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 21
   },
   {
-    "pk": 22,
     "model": "shufflesort.answer",
     "fields": {
       "question": 21,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "As long as they match, you will be fine with either.\n\nExperimenting at a REPL is a very good thing! Be careful if you are writing a bunch of code without testing it as you go - you probably want to be testing and experimenting as you go.\n\nExperiments can be as simple as this:\n\n\n>>> \"cow\"\n'cow'\n>>> 'cow'\n'cow'\n>>> 'cow\"\n  File \"<stdin>\", line 1\n    'cow\"\n        ^\nSyntaxError: EOL while scanning string literal\n>>> \"cow'\n  File \"<stdin>\", line 1\n    \"cow'\n        ^\nSyntaxError: EOL while scanning string literal\n\n\n(\"EOL\" is \"End Of Line\")\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 22
   },
   {
-    "pk": 22,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Experimenting at the REPL: Can you put elements of different types into the same list?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 22
   },
   {
-    "pk": 23,
     "model": "shufflesort.answer",
     "fields": {
       "question": 22,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Yes.\n\n>>> [1, 3.4, False, \"gnu\",]\n[1, 3.4, False, 'gnu']\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 23
   },
   {
-    "pk": 23,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Experimenting at the REPL: What does the Python operator \"**\" do?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 23
   },
   {
-    "pk": 24,
     "model": "shufflesort.answer",
     "fields": {
       "question": 23,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> 2**3\n8\n\nThis is exponentiation.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 24
   },
   {
-    "pk": 24,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Experimenting at the REPL: What is `5 / 2` according to Python?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 24
   },
   {
-    "pk": 25,
     "model": "shufflesort.answer",
     "fields": {
       "question": 24,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "In Python 2:\n\n>>> 5/2\n2\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 25
   },
   {
-    "pk": 25,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What are two ways to get natural floating point division in Python 2?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 25
   },
   {
-    "pk": 26,
     "model": "shufflesort.answer",
     "fields": {
       "question": 25,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "It's pretty common to just make one of the numbers involved a float, e.g.,\n\n>>> 5/2.0\n2.5\n\nor\n\n>>> float(5)/2\n2.5\n\nThe above approaches can abet annoying mistakes. Another alternative is to import the nicer behavior that Python 3 has:\n\n>>> from __future__ import division\n>>> 5/2\n2.5\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 26
   },
   {
-    "pk": 26,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Experimenting at the REPL: What do you get at the REPL when you enter `1, 3`? What is the type?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 26
   },
   {
-    "pk": 27,
     "model": "shufflesort.answer",
     "fields": {
       "question": 26,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> 1, 3\n(1, 3)\n>>> type((1, 3))\n<type 'tuple'>\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 27
   },
   {
-    "pk": 27,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How can you point the identifier `x` at a Python list initialized as `[1, 2, 3]`?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 27
   },
   {
-    "pk": 28,
     "model": "shufflesort.answer",
     "fields": {
       "question": 27,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> x = [1, 2, 3]\n\nThis is often referred to as \"assignment\" but especially since lists are mutable it is useful to remember that there is a distinction here.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 28
   },
   {
-    "pk": 28,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What do you get if you call `dir` on `x`?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 28
   },
   {
-    "pk": 29,
     "model": "shufflesort.answer",
     "fields": {
       "question": 28,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> dir(x)\n['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__delslice__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getslice__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 29
   },
   {
-    "pk": 29,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What is the (short) documentation for `dir`?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 29
   },
   {
-    "pk": 30,
     "model": "shufflesort.answer",
     "fields": {
       "question": 29,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> help(dir)\n\n\nHelp on built-in function dir in module __builtin__:\n\ndir(...)\n    dir([object]) -> list of strings\n\n    If called without an argument, return the names in the current scope.\n    Else, return an alphabetized list of names comprising (some of) the attributes\n    of the given object, and of attributes reachable from it.\n    If the object supplies a method named __dir__, it will be used; otherwise\n    the default dir() logic is used and returns:\n      for a module object: the module's attributes.\n      for a class object:  its attributes, and recursively the attributes\n        of its bases.\n      for any other object: its attributes, its class's attributes, and\n        recursively the attributes of its class's base classes.\n\nYou may need to leave the help screen by pressing \"q\".\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 30
   },
   {
-    "pk": 30,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What are two ways to exit the Python interpreter?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 30
   },
   {
-    "pk": 31,
     "model": "shufflesort.answer",
     "fields": {
       "question": 30,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "One way:\n>>> quit()\n\nAnother way:\nCTRL-D\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 31
   },
   {
-    "pk": 31,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How do you start an IPython REPL?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 31
   },
   {
-    "pk": 32,
     "model": "shufflesort.answer",
     "fields": {
       "question": 31,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "ipython\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 32
   },
   {
-    "pk": 32,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "IPython provides a lot of conveniences. How does this in IPython differ from the same thing in the base Python interpreter?\n\n    x = [1, 2, 3]\n    dir(x)\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 32
   },
   {
-    "pk": 33,
     "model": "shufflesort.answer",
     "fields": {
       "question": 32,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "IPython automatically pretty-prints most output. You could do the same in a normal Python interpreter like this:\n\nfrom pprint import pprint\nx = [1, 2, 3]\npprint(dir(x))\n\nIPython makes things much more convenient.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 33
   },
   {
-    "pk": 33,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What happens when you type \"x.\" and then hit TAB?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 33
   },
   {
-    "pk": 34,
     "model": "shufflesort.answer",
     "fields": {
       "question": 33,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "IPython shows you a list of possible completions, which you should recognize from the output of `dir()`.\n\nTab-completion like this can also help you finish typing long commands or filenames.\n\nTab-completion is your friend. Look for it everywhere, and especially at the shell and in IPython.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 34
   },
   {
-    "pk": 34,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "IPython has \"magic functions\" that start with \"%\", and special syntax for accessing `help()` with an initial \"?\". What does \"%paste\" do?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 34
   },
   {
-    "pk": 35,
     "model": "shufflesort.answer",
     "fields": {
       "question": 34,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "?%paste\n\n\"Paste & execute a pre-formatted code block from clipboard.\"\n\nThis is very handy because it preserves indentation properly when you want to copy in a large chunk of code.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 35
   },
   {
-    "pk": 35,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "In IPython you can run normal shell commands by starting your line with an exclamation point.\n\nNote that these commands run separately from IPython, so `!cd ~` will change the current directory but then immediately return and IPython will still be where it started. To change IPython's working directory you can use the magic function `%cd` though, so everything is fine.\n\nWithout leaving IPython, go to your home directory, make and enter a directory called `survival`, and make a file in that directory called `raft.py`.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 35
   },
   {
-    "pk": 36,
     "model": "shufflesort.answer",
     "fields": {
       "question": 35,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "%cd ~\n!mkdir survival\n%cd survival\n!touch raft.py\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 36
   },
   {
-    "pk": 36,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Open `raft.py` in your editor and make it contain:\n\n    raft_text = \"one grade-a raft\"\n    print raft_text\n\nHow do these compare?\n\n * From IPython: `%load raft.py`\n * From a shell: `python raft.py` or `ipython raft.py`\n * From a shell: `python -i raft.py` or `ipython -i raft.py`\n * From a shell: `python -m pdb raft.py` or `ipython -m pdb raft.py`\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 36
   },
   {
-    "pk": 37,
     "model": "shufflesort.answer",
     "fields": {
       "question": 36,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": " * IPython gives you the magic %load which behaves as if you had typed\n   the contents of the file into the interpreter.\n * You can run a Python script all the way through and quit Python\n   with `python scriptname`.\n * The `-i` flag will leave you in an interactive Python REPL after\n   running through your code. This is useful because you can inspect\n   the status of variables and do further experimenting.\n * Using `-m pdb` starts the Python debugger on your script. This can\n   be useful for diagnosing complex problems. IPython can also use\n   `ipdb` if you have it installed.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 37
   },
   {
-    "pk": 37,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How can you make a Python script behave as an executable?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 37
   },
   {
-    "pk": 38,
     "model": "shufflesort.answer",
     "fields": {
       "question": 37,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You need two things:\n * the file marked as executable to the operating system\n * Python specified as the way the file is run\n\nTo make the file eXecutable by the User (you), run the CHange MODe program from a shell, as:\nchmod u+x raft.py\n\nTo specify Python as the interpreter for the file, the first line of the file should be a \"shebang\". The standard Python shebang is:\n#!/usr/bin/env python\n\n(If you're surprised that `env` is making an appearance again here, check out `man env`.)\n\nNow you can run `raft.py` at the command line, as:\n./raft.py\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 38
   },
   {
-    "pk": 38,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Try `import raft` from IPython. You'll see output. Refactor the `print` line into a `__main__` block so that you get no output when you `import`, but you get output when you run the script at the command line.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 38
   },
   {
-    "pk": 39,
     "model": "shufflesort.answer",
     "fields": {
       "question": 38,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "#!/usr/bin/env python\n\nraft_text = \"one grade-a raft\"\n\nif __name__ == '__main__':\n    print raft_text\n\n(This is also an example, slightly weird, of using `if` in Python.)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 39
   },
   {
-    "pk": 39,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Python modules usually don't have output (or do anything, in fact) when they are imported. One exception is the `this` module. Try `import this`.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 39
   },
   {
-    "pk": 40,
     "model": "shufflesort.answer",
     "fields": {
       "question": 39,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "import this\n\nThe Zen of Python, by Tim Peters\n\nBeautiful is better than ugly.\nExplicit is better than implicit.\nSimple is better than complex.\nComplex is better than complicated.\nFlat is better than nested.\nSparse is better than dense.\nReadability counts.\nSpecial cases aren't special enough to break the rules.\nAlthough practicality beats purity.\nErrors should never pass silently.\nUnless explicitly silenced.\nIn the face of ambiguity, refuse the temptation to guess.\nThere should be one-- and preferably only one --obvious way to do it.\nAlthough that way may not be obvious at first unless you're Dutch.\nNow is better than never.\nAlthough never is often better than *right* now.\nIf the implementation is hard to explain, it's a bad idea.\nIf the implementation is easy to explain, it may be a good idea.\nNamespaces are one honking great idea -- let's do more of those!\n\n(Notice the emphasis on namespaces.)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 40
   },
   {
-    "pk": 40,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "After `import raft`, how can you access the `raft_text`?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 40
   },
   {
-    "pk": 41,
     "model": "shufflesort.answer",
     "fields": {
       "question": 40,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "import raft\nraft.raft_text\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 41
   },
   {
-    "pk": 41,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What if you want to import `raft_text` without the `raft` module namespace? Give two ways to import it directly.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 41
   },
   {
-    "pk": 42,
     "model": "shufflesort.answer",
     "fields": {
       "question": 41,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "One way:\nfrom raft import raft_text\n\nAnother way:\nfrom raft import *\n\nThe second way, with the *, is less well-liked because it imports everything to the root namespace, which can clutter the namespace with tons of identifiers.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 42
   },
   {
-    "pk": 42,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What if you don't like the provided name? How can you import `raft_text` as `rt`, for example?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 42
   },
   {
-    "pk": 43,
     "model": "shufflesort.answer",
     "fields": {
       "question": 42,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "from raft import raft_text as rt\n\nYou can do this for modules as well, like:\nimport raft as super_cool_raft\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 43
   },
   {
-    "pk": 43,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What are the common import lines for `numpy` and `pandas`?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 43
   },
   {
-    "pk": 44,
     "model": "shufflesort.answer",
     "fields": {
       "question": 43,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "import numpy as np\nimport pandas as pd\n\nYou'll use these a lot, eventually.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 44
   },
   {
-    "pk": 44,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "If you change and save a file you're treating as a module, like `raft.py`, how can you reload it into a Python REPL?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 44
   },
   {
-    "pk": 45,
     "model": "shufflesort.answer",
     "fields": {
       "question": 44,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Assuming you initially did `import raft`:\nreload(raft)\n\nWe'll do more with this in a moment.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 45
   },
   {
-    "pk": 45,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How do you run IPython Notebook on your computer?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 45
   },
   {
-    "pk": 46,
     "model": "shufflesort.answer",
     "fields": {
       "question": 45,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "One popular invocation is:\n\nipython notebook --pylab=inline\n\nWhether to load `pylab` is up to you; many find it useful.\n\n(There's also the Anaconda Launcher.)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 46
   },
   {
-    "pk": 46,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How do you run Spyder on your computer?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 46
   },
   {
-    "pk": 47,
     "model": "shufflesort.answer",
     "fields": {
       "question": 46,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You can start it from the command line:\n\nspyder\n\n(There's also the Anaconda Launcher.)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 47
   },
   {
-    "pk": 47,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Ensure Spyder is using IPython. What is your present working directory? How do you change it to be `~/survival/`?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 47
   },
   {
-    "pk": 48,
     "model": "shufflesort.answer",
     "fields": {
       "question": 47,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You can do it before inside the IPython terminal, or use the GUI: \"Browse a working directory\" and then \"Set as current console's working directory\" in the upper right.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 48
   },
   {
-    "pk": 48,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Open `raft.py` in the Spyder editor. How do you run a selection from the editor?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 48
   },
   {
-    "pk": 49,
     "model": "shufflesort.answer",
     "fields": {
       "question": 48,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Select what you want to run, then (on a Mac) press Command-Enter.\n\nThere are many more ways to execute sections of Python code inside Spyder. Feel free to explore the interface.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 49
   },
   {
-    "pk": 49,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What's the value of `x`, `y`, and `z` after this?\n\n    x = [1, 2, 3]\n    y = x + [4]\n    z = x.append(5)\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 49
   },
   {
-    "pk": 50,
     "model": "shufflesort.answer",
     "fields": {
       "question": 49,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "x is [1, 2, 3, 5]\ny is [1, 2, 3, 4]\nz is None\n\nBe careful with this sort of thing! Check carefully as you code!\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 50
   },
   {
-    "pk": 50,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: How can you check whether a variable is `None`?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 50
   },
   {
-    "pk": 51,
     "model": "shufflesort.answer",
     "fields": {
       "question": 50,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use `is`. For example, the following is not uncommon:\n\nif x is not None:\n    # Do something about x\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 51
   },
   {
-    "pk": 51,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What other methods are there for lists?\n\nHow can you get help on list methods?\n\nHow can you get the LENgth of a list?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 51
   },
   {
-    "pk": 52,
     "model": "shufflesort.answer",
     "fields": {
       "question": 51,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Using `dir()` or tab completion on a list (or `list`):\n\nappend\ncount\nextend\nindex\ninsert\npop\nremove\nreverse\nsort\n\nHelp still works via e.g., `help(list.pop)` or `?list.pop`.\n\nThe `len` function will give you the length.\n\n>>> len([1, 2, 3])\n3\n\nOther useful functions include `sorted`, `reverse`, and `sum`.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 52
   },
   {
-    "pk": 52,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Can you add a list and an integer? What about multiplication? What about a string and an integer? Can you add a string and a string? What happens?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 52
   },
   {
-    "pk": 53,
     "model": "shufflesort.answer",
     "fields": {
       "question": 52,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You should find some useful phenomena.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 53
   },
   {
-    "pk": 53,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Python functions are defined like this:\n\n    def silly_subtract(x, y):\n        return x - y\n\nLoad this definition in your REPL. Some of the following will fail. Why?\n\n * `silly_subtract(10, 7)`\n * `silly_subtract(10, y=7)`\n * `silly_subtract(x=10, 7)`\n * `silly_subtract(x=10, y=7)`\n * `silly_subtract(y=7, 10)`\n * `silly_subtract(y=7, x=10)`\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 53
   },
   {
-    "pk": 54,
     "model": "shufflesort.answer",
     "fields": {
       "question": 53,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "The ones that don't work produce `SyntaxError: non-keyword arg after keyword arg`, which should make sense.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 54
   },
   {
-    "pk": 54,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What does a function with no `return` statement do?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 54
   },
   {
-    "pk": 55,
     "model": "shufflesort.answer",
     "fields": {
       "question": 54,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> def no_return():\n...     x = 5\n...\n>>> v = no_return()\n>>> v\n>>> type(v)\n<type 'NoneType'>\n>>> v is None\nTrue\n\nIt returns `None`. Note that it does *not* return the last evaluated expression, as is common in other languages.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 55
   },
   {
-    "pk": 55,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Put a function `make_rafts` in `raft.py` that takes arguments `num_rafts` and `num_passengers`. It should return a list of `num_rafts` strings, and each \"raft\" string should be all asterisks, and `num_passengers` long.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 55
   },
   {
-    "pk": 56,
     "model": "shufflesort.answer",
     "fields": {
       "question": 55,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def make_rafts(num_rafts, num_passengers):\n    return [\"*\" * num_passengers] * num_rafts\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 56
   },
   {
-    "pk": 56,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Give `num_passengers` a default value of 8.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 56
   },
   {
-    "pk": 57,
     "model": "shufflesort.answer",
     "fields": {
       "question": 56,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def make_rafts(num_rafts, num_passengers=8):\n    return [\"*\" * num_passengers] * num_rafts\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 57
   },
   {
-    "pk": 57,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Add a multi-line comment in docstring position for the function, explaining what it does. (Note that [PEP 8](https://www.python.org/dev/peps/pep-0008/) suggests code lines be no longer than 79 characters, and text lines no longer than 72.)\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 57
   },
   {
-    "pk": 58,
     "model": "shufflesort.answer",
     "fields": {
       "question": 57,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def make_rafts(num_rafts, num_passengers=8):\n    \"\"\"\n    Returns a list of `num_rafts` strings with each \"raft\" string\n    being `num_passengers` asterisks.\n    \"\"\"\n    return [\"*\" * num_passengers] * num_rafts\n\nStyle conventions for docstrings may vary, but whatever the style, the docstring of a loaded function is what you get back from `help`, so make it helpful.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 58
   },
   {
-    "pk": 58,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Change the `__main__` block to print the result of `make_rafts(1)`.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 58
   },
   {
-    "pk": 59,
     "model": "shufflesort.answer",
     "fields": {
       "question": 58,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "if __name__ == '__main__':\n    print make_rafts(1)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 59
   },
   {
-    "pk": 59,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Make the `raft.py` script accept command-line input for the number of rafts.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 59
   },
   {
-    "pk": 60,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You aren't using the `raft_text` any more. Comment it out using a one-line comment.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 60
   },
   {
-    "pk": 60,
     "model": "shufflesort.answer",
     "fields": {
       "question": 60,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "# raft_text = \"one grade-a raft\"\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 60
   },
   {
-    "pk": 61,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "DON'T COMMENT OUT CODE. Version control preserves old code; don't litter your code with carcasses. Remove the `raft_text` line entirely.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 61
   },
   {
-    "pk": 61,
     "model": "shufflesort.answer",
     "fields": {
       "question": 61,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "(the line is gone)\n\nThis rule doesn't apply to quick experiments, but in general you really don't want to be carrying around dead code. It makes things confusing and harder to maintain.\n\nLine comments should be used to include natural human language that helps make an algorithm clearer, for example.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 61
   },
   {
-    "pk": 62,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What does `make_rafts` do when it receives a negative `num_rafts`? Add behavior so `make_rafts` will `raise ValueError(\"Helpful message\")` on negative arguments.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 62
   },
   {
-    "pk": 62,
     "model": "shufflesort.answer",
     "fields": {
       "question": 62,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def make_rafts(num_rafts, num_passengers=8):\n    \"\"\"\n    Returns a list of `num_rafts` strings with each \"raft\" string\n    being `num_passengers` asterisks.\n    \"\"\"\n    if num_rafts < 0 or num_passengers < 0:\n        raise ValueError(\"Negative quantities don't make sense!\")\n    return [\"*\" * num_passengers] * num_rafts\n\nRaising an exception breaks out of normal function execution so we never make it to the `return`.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 62
   },
   {
-    "pk": 63,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: You can write some one-line `if` statements (etc.) in Python. This is sometimes discouraged because it can be less readable. But say you want `x` to be 'big' if `y` is over 10, and 'small' otherwise. How can you do it in one line?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 63
   },
   {
-    "pk": 63,
     "model": "shufflesort.answer",
     "fields": {
       "question": 63,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "x = 'small' if y < 20 else 'big'\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 63
   },
   {
-    "pk": 64,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Python has `else` like you'd expect. It's \"else if\" is `elif`. Write a quick function that takes a Fahrenheit temperature and returns the state of water at that temperature (at standard pressure).\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 64
   },
   {
-    "pk": 64,
     "model": "shufflesort.answer",
     "fields": {
       "question": 64,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def state_of_water_at(degrees_F):\n    if degrees_F <= 32:\n        return \"solid\"\n    elif degrees_F < 212:\n        return \"liquid\"\n    else:\n        return \"gas\"\n\nI'm not actually sure about whether those inequalities should be strict.\n\nI prefer to use \"<\" and \"<=\" rather than \">\" and \">=\" because then everything reads like a number line and ranges read easily.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 64
   },
   {
-    "pk": 65,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Write a `for` loop that announces the departure of four rafts (by number) using `range`.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 65
   },
   {
-    "pk": 65,
     "model": "shufflesort.answer",
     "fields": {
       "question": 65,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "for raft_id in range(4):\n    print \"raft\", raft_id + 1, \"is away!\"\n\nOther ways to print:\n\nprint \"raft %s is away!\" % (raft_id + 1)\n\nprint \"raft \" + str(raft_id + 1) + \" is away!\"\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 65
   },
   {
-    "pk": 66,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: In Python 2, `range` returns a list, completely realized. `xrange` returns something else. You will eventually want to learn about [generators](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) and you might test your knowledge by making your own version of `range` that returns one element at a time.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 66
   },
   {
-    "pk": 67,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Write a `for` loop that prints out each raft from `make_rafts(4)` on its own line.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 67
   },
   {
-    "pk": 66,
     "model": "shufflesort.answer",
     "fields": {
       "question": 67,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "for raft in make_rafts(4):\n    print raft\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 66
   },
   {
-    "pk": 68,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Write a `for` loop that prints out each raft from `make_rafts(4)` on its own line, but with each subsequent raft farther from the shore.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 68
   },
   {
-    "pk": 67,
     "model": "shufflesort.answer",
     "fields": {
       "question": 68,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "for raft_id, raft in enumerate(make_rafts(4)):\n    print \" \" * raft_id + raft\n\nThis is using tuple unpacking to assign to `raft_id` and `raft`.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 67
   },
   {
-    "pk": 69,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Say `x` and `y` have values. How can you swap their values in one line? How does this demonstrate tuple packing and unpacking?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 69
   },
   {
-    "pk": 68,
     "model": "shufflesort.answer",
     "fields": {
       "question": 69,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "x = 1\ny = 100\nx, y = y, x\n(x, y) = y, x\nx, y = (y, x)\n(x, y) = (y, x)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 68
   },
   {
-    "pk": 70,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "The `random` module includes a function `randint`. Write a new function `used_rafts` that takes one argument, `num_rafts`, and returns that many rafts with random capacities from 2 to 12.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 70
   },
   {
-    "pk": 69,
     "model": "shufflesort.answer",
     "fields": {
       "question": 70,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "from random import randint\n#...\ndef used_rafts(num_rafts):\n    \"\"\"\n    Returns a list of `num_rafts` strings with each \"raft\" string\n    being randomly from two to twelve asterisks.\n    \"\"\"\n    rafts = []\n    for _ in range(num_rafts):\n        rafts.append(\"*\" * randint(2, 12))\n    return rafts\n\nIt's a convention in Python to use the variable `_` when it won't be used. It also stores the most recent result in the REPL.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 69
   },
   {
-    "pk": 71,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Get a dozen used rafts and make a new list with the lengths of each raft.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 71
   },
   {
-    "pk": 70,
     "model": "shufflesort.answer",
     "fields": {
       "question": 71,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts = used_rafts(12)\nlengths = []\nfor raft in rafts:\n    lengths.append(len(raft))\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 70
   },
   {
-    "pk": 72,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Get a dozen used rafts and make a new list with the lengths of each raft, but only use one line of code to do it.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 72
   },
   {
-    "pk": 71,
     "model": "shufflesort.answer",
     "fields": {
       "question": 72,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts = used_rafts(12)\nlengths = [len(raft) for raft in rafts]\n\nThis is called a list comprehension.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 71
   },
   {
-    "pk": 73,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: How can you use `map` to achieve the same result?\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 73
   },
   {
-    "pk": 74,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You can add an \"if\" filter to the end of a list comprehension. Write a line that gives you just the rafts that seat more than six.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 74
   },
   {
-    "pk": 72,
     "model": "shufflesort.answer",
     "fields": {
       "question": 74,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "[raft for raft in rafts if 6 < len(raft)]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 72
   },
   {
-    "pk": 75,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: How can you use `filter` to achieve the same result?\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 75
   },
   {
-    "pk": 76,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Add up the lengths of all the rafts.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 76
   },
   {
-    "pk": 73,
     "model": "shufflesort.answer",
     "fields": {
       "question": 76,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "sum(len(raft) for raft in rafts)\n\n(That isn't quite a \"list\" comprehension, but it works.)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 73
   },
   {
-    "pk": 77,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: How can you use `reduce` to achieve the same result?\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 77
   },
   {
-    "pk": 78,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Re-write `used_rafts` to use a list comprehension.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 78
   },
   {
-    "pk": 74,
     "model": "shufflesort.answer",
     "fields": {
       "question": 78,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def used_rafts(num_rafts):\n    \"\"\"\n    Returns a list of `num_rafts` strings with each \"raft\" string\n    being randomly from two to twelve asterisks.\n    \"\"\"\n    return [\"*\" * randint(2, 12) for _ in range(num_rafts)]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 74
   },
   {
-    "pk": 79,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: You can write nested comprehensions. Write one to produce a list of all two-element tuples where each element is from the numbers 1 to 10.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 79
   },
   {
-    "pk": 75,
     "model": "shufflesort.answer",
     "fields": {
       "question": 79,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "[(a, b) for a in range(1, 11) for b in range(1, 11)]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 75
   },
   {
-    "pk": 80,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Some functions take other functions as arguments. The `key` argument to the `sorted` function is itself a function, for example. Say you want to sort your rafts by how close they are to 7-passenger, for some reason. How would you do this?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 80
   },
   {
-    "pk": 76,
     "model": "shufflesort.answer",
     "fields": {
       "question": 80,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "sorted(rafts, key=lambda x: abs(len(x) - 7))\n\nIn Python the lambda syntax lets you define anonymous (nameless) functions. For example, these are equivalent:\n\ndef myfun(x):\n    return x**2\n\nmyfun = lambda x: x**2\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 76
   },
   {
-    "pk": 81,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Sort your rafts.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 81
   },
   {
-    "pk": 77,
     "model": "shufflesort.answer",
     "fields": {
       "question": 81,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts = sorted(rafts)\n\n(This happens to work in a reasonable way because of the default sort for strings.)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 77
   },
   {
-    "pk": 82,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use list indexing to get the first raft.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 82
   },
   {
-    "pk": 78,
     "model": "shufflesort.answer",
     "fields": {
       "question": 82,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts[0]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 78
   },
   {
-    "pk": 83,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Change the first raft to be illegally short.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 83
   },
   {
-    "pk": 79,
     "model": "shufflesort.answer",
     "fields": {
       "question": 83,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts[0] = \"*\"\nprint rafts # changed in place!\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 79
   },
   {
-    "pk": 84,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use list indexing to get the last raft.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 84
   },
   {
-    "pk": 80,
     "model": "shufflesort.answer",
     "fields": {
       "question": 84,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts[-1]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 80
   },
   {
-    "pk": 85,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use slicing to get the second and third rafts.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 85
   },
   {
-    "pk": 81,
     "model": "shufflesort.answer",
     "fields": {
       "question": 85,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts[1:3]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 81
   },
   {
-    "pk": 86,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use slicing to get the first two rafts.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 86
   },
   {
-    "pk": 82,
     "model": "shufflesort.answer",
     "fields": {
       "question": 86,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts[:2]\n\nThis is very useful for checking out a small part of a big list!\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 82
   },
   {
-    "pk": 87,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use slicing to get the last two rafts.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 87
   },
   {
-    "pk": 83,
     "model": "shufflesort.answer",
     "fields": {
       "question": 87,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts[-2:]\n\nThis is very useful for checking out a small part of a big list!\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 83
   },
   {
-    "pk": 88,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use slicing to get every other raft.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 88
   },
   {
-    "pk": 84,
     "model": "shufflesort.answer",
     "fields": {
       "question": 88,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts[::2]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 84
   },
   {
-    "pk": 89,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use slicing to get the rafts in reverse order.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 89
   },
   {
-    "pk": 85,
     "model": "shufflesort.answer",
     "fields": {
       "question": 89,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "rafts[::-1]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 85
   },
   {
-    "pk": 90,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "They aren't the exactly lists, but a lot of the indexing/slicing that works for lists also works for strings. How can you get the year part from the string \"2015-02-14\"?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 90
   },
   {
-    "pk": 86,
     "model": "shufflesort.answer",
     "fields": {
       "question": 90,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> \"2015-02-14\"[:4]\n'2015'\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 86
   },
   {
-    "pk": 91,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Learn about how to read and write Python `datetime` objects to and from various string and numeric formats using the `date` and `datetime` modules (and/or others).\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 91
   },
   {
-    "pk": 92,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Learn about using regular expressions in Python using the `re` module.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 92
   },
   {
-    "pk": 93,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "There's a common Python trick for making a string into a list of characters. How can you make \"alphabet\" into a list containing the letters in \"alphabet\"?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 93
   },
   {
-    "pk": 87,
     "model": "shufflesort.answer",
     "fields": {
       "question": 93,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> list(\"alphabet\")\n['a', 'l', 'p', 'h', 'a', 'b', 'e', 't']\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 87
   },
   {
-    "pk": 94,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "The normal way to concatenate a list of strings is a little weird in Python. `\"\".join(['a', 'b', 'c'])` gives `\"abc\"`. Can you produce \"on and on and on\" without typing \"on\" or \"and\" more than once?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 94
   },
   {
-    "pk": 88,
     "model": "shufflesort.answer",
     "fields": {
       "question": 94,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "\" and \".join([\"on\"] * 3)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 88
   },
   {
-    "pk": 95,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What is the length of `set([1, 1, 2, 2, 3])`?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 95
   },
   {
-    "pk": 89,
     "model": "shufflesort.answer",
     "fields": {
       "question": 95,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> len(set([1, 1, 2, 2, 3]))\n3\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 89
   },
   {
-    "pk": 96,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What is the length of `set(\"alphabet\")`?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 96
   },
   {
-    "pk": 90,
     "model": "shufflesort.answer",
     "fields": {
       "question": 96,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> len(set(\"alphabet\"))\n7\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 90
   },
   {
-    "pk": 97,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What operations are there on a set?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 97
   },
   {
-    "pk": 91,
     "model": "shufflesort.answer",
     "fields": {
       "question": 97,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "From `dir(set())`:\n\nadd\nclear\ncopy\ndifference\ndifference_update\ndiscard\nintersection\nintersection_update\nisdisjoint\nissubset\nissuperset\npop\nremove\nsymmetric_difference\nsymmetric_difference_update\nunion\nupdate\n\nYou can also use shorthand infix operators for set operations:\n\n\"|\", like \"or\", gives \"union\"\n\"&\", like \"and\", gives \"intersection\"\n\"-\", like \"minus\", gives \"difference\"\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 91
   },
   {
-    "pk": 98,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You can use `in` to check whether an element is in a collection. Both of these work, evaluating to a boolean:\n\n    'a' in ['cow', 'ant', 'a', 'b']\n    'a' in set(['cow', 'ant', 'a', 'b'])\n\nWhy would one be preferred over the other?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 98
   },
   {
-    "pk": 92,
     "model": "shufflesort.answer",
     "fields": {
       "question": 98,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Checking for membership in a list requires a full pass through the data (linear time). Checking for membership in a set happens in constant time (after the set is set up). So if you have a lot of checks to do, using a set will be faster.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 92
   },
   {
-    "pk": 99,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Use %timeit (in IPython) to examine performance differences between lists and sets.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 99
   },
   {
-    "pk": 93,
     "model": "shufflesort.answer",
     "fields": {
       "question": 99,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "For example:\n\nIn [80]: big_list = range(int(1e6))\n\nIn [81]: big_set = set(range(int(1e6)))\n\nIn [82]: %timeit 'a' in big_list\n10 loops, best of 3: 70.7 ms per loop\n\nIn [83]: %timeit 'a' in big_set\n10000000 loops, best of 3: 110 ns per loop\n\nThe check against the set is around 600,000 times faster.\n\nIPython also has %time, %%time, and %%timeit.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 93
   },
   {
-    "pk": 100,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Can you use `in` to check whether the string \"car\" exists as a substring of \"carapace\"?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 100
   },
   {
-    "pk": 94,
     "model": "shufflesort.answer",
     "fields": {
       "question": 100,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Yes.\n\n>>> \"car\" in \"carapace\"\nTrue\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 94
   },
   {
-    "pk": 101,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You can write set literals like lists with curly braces, and set comprehensions. Make a set of the squares of the first seven positive integers.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 101
   },
   {
-    "pk": 95,
     "model": "shufflesort.answer",
     "fields": {
       "question": 101,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> {x**2 for x in range(1, 8)}\nset([1, 36, 9, 16, 49, 25, 4])\n\nNotice that there is no guarantee for element order.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 95
   },
   {
-    "pk": 102,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Is `set([1, 2, 3])` the same thing as `{1, 2, 3}`? Is `set()` the same as `{}`? Why?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 102
   },
   {
-    "pk": 96,
     "model": "shufflesort.answer",
     "fields": {
       "question": 102,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "The curly brace notation works for sets except for the empty set, because Python dicts also use curly braces so it's ambiguous and the dict syntax dominates.\n\n>>> type({})\n<type 'dict'>\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 96
   },
   {
-    "pk": 103,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "The Python `dict` is a very useful data structure. In other languages, close equivalents may have names like hash, hash-map, map, associative array, or even (what are you doing, JavaScript?) object. Python dict literals look like this:\n\n    {'a key name': 'a corresponding value',}\n\nKeys and values can be any Python thing, including other dicts.\n\nWhat methods are there on dicts?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 103
   },
   {
-    "pk": 97,
     "model": "shufflesort.answer",
     "fields": {
       "question": 103,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "clear\ncopy\nfromkeys\nget\nhas_key\nitems\niteritems\niterkeys\nitervalues\nkeys\npop\npopitem\nsetdefault\nupdate\nvalues\nviewitems\nviewkeys\nviewvalues\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 97
   },
   {
-    "pk": 104,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "You can read and write dict values via square bracket notation like this:\n\n    x = {1: 4, 2: 8,}\n    x[2] # 8\n    x[3] = 12\n    x[3] # 12\n\nWhat happens if you use this kind of indexing to access a key that isn't in a dict?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 104
   },
   {
-    "pk": 98,
     "model": "shufflesort.answer",
     "fields": {
       "question": 104,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> {}['nope']\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError: 'nope'\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 98
   },
   {
-    "pk": 105,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Write a function `counted` that takes a list and returns a dict in which elements of the passed list are keys and the values are the number of times the element appears. So:\n\n    counted(['one', 'two', 'one']) == {'one': 2, 'two': 1}\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 105
   },
   {
-    "pk": 99,
     "model": "shufflesort.answer",
     "fields": {
       "question": 105,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def counted(items):\n    result = {}\n    for item in items:\n        if item not in result:\n            result[item] = 1\n        else:\n            result[item] += 1\n    return result\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 99
   },
   {
-    "pk": 106,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use `.get` to get a default value when you access a dict by a nonexistent key.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 106
   },
   {
-    "pk": 100,
     "model": "shufflesort.answer",
     "fields": {
       "question": 106,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ">>> {}.get('nope', 'but this instead')\n'but this instead'\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 100
   },
   {
-    "pk": 107,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use `.get` to re-write `counted`.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 107
   },
   {
-    "pk": 101,
     "model": "shufflesort.answer",
     "fields": {
       "question": 107,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def counted(items):\n    result = {}\n    for item in items:\n        result[item] = result.get(item, 0) + 1\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 101
   },
   {
-    "pk": 108,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Learn about `collections.Counter`, which does all this kind of counting for you more easily.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 108
   },
   {
-    "pk": 109,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Does `.get` (by itself) affect the dict it's called on?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 109
   },
   {
-    "pk": 102,
     "model": "shufflesort.answer",
     "fields": {
       "question": 109,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "No.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 102
   },
   {
-    "pk": 110,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Write a function `by_first` that takes a list of strings and returns a dict where the keys are initial letters of the strings and the values are lists of the provided words that start with that letter.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 110
   },
   {
-    "pk": 103,
     "model": "shufflesort.answer",
     "fields": {
       "question": 110,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def by_first(words):\n    result = {}\n    for word in words:\n        letter_words = result.get(word[:1], [])\n        letter_words.append(word)\n        result[word[:1]] = letter_words\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 103
   },
   {
-    "pk": 111,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Does `.setdefault` change the dict it's called on, when the key is not found?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 111
   },
   {
-    "pk": 104,
     "model": "shufflesort.answer",
     "fields": {
       "question": 111,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Yes.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 104
   },
   {
-    "pk": 112,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Re-write `by_first` using `.setdefault`:\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 112
   },
   {
-    "pk": 105,
     "model": "shufflesort.answer",
     "fields": {
       "question": 112,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def by_first(words):\n    result = {}\n    for word in words:\n        results.setdefault(word[:1], []).append(word)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 105
   },
   {
-    "pk": 113,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Learn about `collections.defaultdict`, which does all this kind of defaulting for you more easily.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 113
   },
   {
-    "pk": 114,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What does this produce? How is it produced? Explain each step.\n\n    dict(zip(\"asdf\", range(4)))\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 114
   },
   {
-    "pk": 106,
     "model": "shufflesort.answer",
     "fields": {
       "question": 114,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "This produces the dict {'a': 0, 's': 1, 'd': 2, 'f': 3}.\n\n1. The string \"asdf\" is interpreted as the list ['a', 's', 'd', 'f'].\n2. range(4) becomes the list [1, 2, 3, 4].\n3. zip takes the two lists and makes a list of tuples, [('a', 0), ('s', 1), ('d', 2), ('f', 3)]\n4. dict builds a dict with the first elements in the tuples as keys and the second elements in the tuples as values.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 106
   },
   {
-    "pk": 115,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Write a function `explain` that takes a dict and prints out \"key is value\" for each key-value pair. (Use `.items` or `.iteritems`.)\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 115
   },
   {
-    "pk": 107,
     "model": "shufflesort.answer",
     "fields": {
       "question": 115,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def explain(this_dict):\n    for key, value in this_dict.items():\n        print \"{} is {}\".format(key, value)\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 107
   },
   {
-    "pk": 116,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: What is the dict `.update` method good for?\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 116
   },
   {
-    "pk": 117,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Files. You can open a file with `open`. By default, the file is opened read-only. Don't forget to close your files!\n\n    f = open('filename')\n    # read f and do something\n    f.close()\n\nWhat methods do you have on a file object? Which ones are for reading? How do they vary?\n\nNote that you can iterate through a file object as if it were a list.\n\nWrite a function `show` that takes a filename and prints out all the lines of the file.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 117
   },
   {
-    "pk": 108,
     "model": "shufflesort.answer",
     "fields": {
       "question": 117,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def show(filename):\n    f = open('filename')\n    for line in f:\n        print line\n    f.close()\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 108
   },
   {
-    "pk": 118,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Managing all this closing of open things is a drag, and it could get screwed up if there are exceptions and so on. Python has context managers that make this easier:\n\n    with open('filename') as f:\n        # do something with f\n\nWrite a function `lines_of` that takes a filename and returns a list of strings, one per line from the file.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 118
   },
   {
-    "pk": 109,
     "model": "shufflesort.answer",
     "fields": {
       "question": 118,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def lines_of(filename):\n    with open(filename) as f:\n        return [line for line in f]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 109
   },
   {
-    "pk": 119,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "What string method(s) can you use to remove trailing newlines from strings like \"a line of text\\n\"?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 119
   },
   {
-    "pk": 110,
     "model": "shufflesort.answer",
     "fields": {
       "question": 119,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": ".rstrip and .strip are good candidates, as well as (possibly) .replace.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 110
   },
   {
-    "pk": 120,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Use `.split` to make a function `read_csv` that takes a filename and (naively) reads in a CSV file as a list of lists.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 120
   },
   {
-    "pk": 111,
     "model": "shufflesort.answer",
     "fields": {
       "question": 120,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "def read_csv(filename):\n    with open(filename) as f:\n        return [line.strip().split(\",\") for line in f]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 111
   },
   {
-    "pk": 121,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "CSV is more complicated than that! (See [RFC 4180](https://tools.ietf.org/html/rfc4180).) Re-write `read_csv` using the csv module.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 121
   },
   {
-    "pk": 112,
     "model": "shufflesort.answer",
     "fields": {
       "question": 121,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "import csv\n\ndef read_csv(filename):\n    with open(filename) as f:\n        return [line for line in csv.reader(f)]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 112
   },
   {
-    "pk": 122,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Write a list comprehension over a list of lists (as from a CSV) that returns only the first column of data as a list.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 122
   },
   {
-    "pk": 113,
     "model": "shufflesort.answer",
     "fields": {
       "question": 122,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "first_col = [line[0] for line in list_of_lists]\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 113
   },
   {
-    "pk": 123,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Read in a CSV file with `csv.DictReader`. When might you prefer this approach?\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 123
   },
   {
-    "pk": 124,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "How can you open a file so that you can write to it?\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 124
   },
   {
-    "pk": 114,
     "model": "shufflesort.answer",
     "fields": {
       "question": 124,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "open('filename', 'w')\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 114
   },
   {
-    "pk": 125,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Look into the `codecs` module for how to ensure you're working with UTF-8.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 125
   },
   {
-    "pk": 126,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Write a function `rand_word` that generates random five-letter words.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 126
   },
   {
-    "pk": 115,
     "model": "shufflesort.answer",
     "fields": {
       "question": 126,
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "import string\nimport random\n\ndef rand_word():\n    return \"\".join(random.sample(string.letters, 5))\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 115
   },
   {
-    "pk": 127,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Generate a random CSV file, five columns and 100 rows, with all elements random five-letter words.\n\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 127
   },
   {
-    "pk": 128,
     "model": "shufflesort.question",
     "fields": {
-      "date": "1999-12-31T23:59:00.000Z",
       "text": "Extension: Read a CSV file in, capitalize its second field, and write a new CSV file out.\n",
+      "date": "1999-12-31T23:59:00.000Z",
       "user": "Aaron"
-    }
+    },
+    "pk": 128
   }
 ]

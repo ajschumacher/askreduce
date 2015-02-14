@@ -151,10 +151,10 @@ You can alter your PATH just as we altered PS1. Anaconda works by altering your 
 
 
 :
-What other configuration can you do?
+Where does bash read its initial configuration from?
 
 ::
-So much. Bash reads configuration from .bash_profile and .bashrc, for instance. You can get way into customizing your environment, and it can make you more effective and happier. I post my configuration here:
+You can do so much configuration. Bash reads configuration from .bash_profile and .bashrc, for instance. You can get way into customizing your environment, and it can make you more effective and happier. I post my configuration here:
 
 https://github.com/ajschumacher/.emacs.d
 
