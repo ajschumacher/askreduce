@@ -1017,6 +1017,7 @@ rafts[1:3]
 :
 Use slicing to get the first two rafts.
 
+::
 rafts[:2]
 
 This is very useful for checking out a small part of a big list!
