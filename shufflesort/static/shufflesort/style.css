@@ -31,14 +31,21 @@ pre {
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-header .home {
+nav {
+  overflow: auto;
+}
+
+header .home, nav .previous {
   float: left;
 }
 
-header .deidentify {
+header .deidentify, nav .subsequent {
   float: right;
-  display: inline;
   margin-left: auto;
+}
+
+header .deidentify {
+  display: inline;
 }
 
 article, section {

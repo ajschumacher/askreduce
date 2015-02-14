@@ -31,10 +31,21 @@ class QuestionView(View):
     @with_identity
     def get(self, request, question_id):
         question = get_object_or_404(Question, pk=question_id)
+        q = int(question_id)
+        if Question.objects.filter(pk=q - 1).exists():
+            previous = q - 1
+        else:
+            previous = None
+        if Question.objects.filter(pk=q + 1).exists():
+            subsequent = q + 1
+        else:
+            subsequent = None
         answers = question.answer_set.order_by('-date').all()
         answerers = [answer.user for answer in answers]
         answered = request.session['user'] in answerers
         context = {'question': question,
+                   'previous': previous,
+                   'subsequent': subsequent,
                    'answers': answers,
                    'answered': answered,}
         return render(request, 'shufflesort/question.html', context)

@@ -4,6 +4,23 @@
 
 {% block content %}
 
+<nav>
+  <span class="previous">
+    {% if previous %}
+    <a href="{% url 'shufflesort:question' previous %}">
+      Previous
+    </a>
+    {% endif %}
+  </span>
+  <span class="subsequent">
+    {% if subsequent %}
+    <a href="{% url 'shufflesort:question' subsequent %}">
+      Next
+    </a>
+    {% endif %}
+  </span>
+</nav>
+
 {{ question.text|markdown_filter|safe }}
 
 <form action="{% url 'shufflesort:question' question.id %}" method="post">
